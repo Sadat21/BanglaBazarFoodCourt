@@ -67,3 +67,7 @@ C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources

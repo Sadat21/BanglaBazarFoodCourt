@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,8 +8,9 @@ namespace BanglaBazarFoodCourt.Models
 {
     public class Customer
     {
-        private int id { get; set; }
-        private string name { get; set; }
-        private string contactNo { get; set; }
+        
+        public int id { get; set; }
+        public string name { get; set; }
+        public string contactNo { get; set; }
     }
 }

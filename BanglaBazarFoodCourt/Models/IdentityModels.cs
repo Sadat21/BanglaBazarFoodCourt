@@ -20,6 +20,7 @@ namespace BanglaBazarFoodCourt.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        DbSet<Customer> CustomerTable { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
