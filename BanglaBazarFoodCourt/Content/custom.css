@@ -1,0 +1,16 @@
+﻿.thumbnail-custom {
+    border: none;
+}
+
+.navbar-custom {
+    background-color: #ff9500;
+    border-color: #ff9500;
+}
+
+.nav-custom, .nav-custom > li > a {
+    color: #333333!important;
+}
+
+.nav-custom > li > a:hover {
+    color: #ffffff!important;
+}
