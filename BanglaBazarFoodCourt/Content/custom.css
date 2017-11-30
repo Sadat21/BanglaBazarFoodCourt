@@ -1,16 +1,34 @@
-﻿.thumbnail-custom {
+﻿
+.thumbnail-custom {
     border: none;
 }
 
 .navbar-custom {
     background-color: #ff9500;
     border-color: #ff9500;
+    max-height: 500px;
+    font-size: 20px;
 }
 
 .nav-custom, .nav-custom > li > a {
-    color: #333333!important;
+    color: #333333 !important;
+    margin-left: 5px;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+    margin-top: 10px;
 }
 
 .nav-custom > li > a:hover {
     color: #ffffff!important;
+    border-bottom:  5px solid #ffc948;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.modal-custom {
+    width: 50%;
 }
