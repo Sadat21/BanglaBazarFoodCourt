@@ -1,0 +1,57 @@
+﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Order>
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickupTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.orderTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickupTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditOrder", new { id=item.orderNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.orderNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.orderNo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,6 +219,10 @@
     <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.cs" />
     <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.Designer.cs">
       <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711302124145_Added Name Parameter to Promo.cs" />
+    <Compile Include="Migrations\201711302124145_Added Name Parameter to Promo.Designer.cs">
+      <DependentUpon>201711302124145_Added Name Parameter to Promo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -301,6 +306,23 @@
     <Content Include="Views\Home\Order.cshtml" />
     <Content Include="Views\Home\Menus.cshtml" />
     <Content Include="Views\Home\Specials.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\FoodItems.cshtml" />
+    <Content Include="Views\Admin\Employees.cshtml" />
+    <Content Include="Views\Admin\Customers.cshtml" />
+    <Content Include="Views\Admin\Promotions.cshtml" />
+    <Content Include="Views\Admin\Orders.cshtml" />
+    <Content Include="Views\Admin\Phone_Order.cshtml" />
+    <Content Include="Views\Admin\Supervisors.cshtml" />
+    <Content Include="Views\Admin\EditCustomer.cshtml" />
+    <Content Include="Views\Admin\EditPromotion.cshtml" />
+    <Content Include="Views\Admin\EditOrder.cshtml" />
+    <Content Include="Views\Admin\EditPhone_Order.cshtml" />
+    <Content Include="Views\Admin\EditSupervisor.cshtml" />
+    <Content Include="Views\Admin\EditEmployee.cshtml" />
+    <Content Include="Views\Admin\EditFoodItem.cshtml" />
+    <Content Include="Views\Admin\CreateFoodItem.cshtml" />
+    <Content Include="Views\Admin\DeleteFoodItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -346,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711300405280_Added Phone_Orders Table.resx">
       <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711302124145_Added Name Parameter to Promo.resx">
+      <DependentUpon>201711302124145_Added Name Parameter to Promo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

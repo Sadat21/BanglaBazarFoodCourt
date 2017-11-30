@@ -10,11 +10,17 @@ namespace BanglaBazarFoodCourt.Models.Entities
     {
         [Key]
         public int FoodID { get; set; }
+
         public string Name { get; set; }
+
         public int Availability { get; set; }
+
         public string Type { get; set; }
+
         public string Description { get; set; }
+
         public double Price { get; set; }
+
         public byte [] Picture { get; set; }
     }
 }
