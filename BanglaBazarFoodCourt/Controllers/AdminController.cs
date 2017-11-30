@@ -3,6 +3,7 @@ using BanglaBazarFoodCourt.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -15,6 +16,7 @@ namespace BanglaBazarFoodCourt.Controllers
      * 
      *
      * */
+     [Authorize]
     public class AdminController : Controller
     {
         private ApplicationDbContext _context;
@@ -44,9 +46,16 @@ namespace BanglaBazarFoodCourt.Controllers
             return View();
         }
 
-
-        public ActionResult SaveFoodItem(Food_Item foodItem)
+        [HttpPost]
+        public ActionResult SaveFoodItem(Food_Item foodItem, HttpPostedFileBase ImageFile)
         {
+            
+            using (var ms = new MemoryStream())
+            {
+                ImageFile.InputStream.CopyTo(ms);
+                foodItem.Picture = ms.ToArray();
+            }
+
             _context.Food_ItemTable.Add(foodItem);
             _context.SaveChanges();
             return RedirectToAction("FoodItems");
@@ -101,6 +110,12 @@ namespace BanglaBazarFoodCourt.Controllers
             _context.Food_ItemTable.Remove(temp);
             _context.SaveChanges();
             return RedirectToAction("FoodItems");
+        }
+
+        public ActionResult GetImage(int i)
+        {
+            byte[] bytes = _context.Food_ItemTable.Find(i).Picture; //Get the image from your database
+            return File(bytes, "image/png"); //or "image/jpeg", depending on the format
         }
 
 
@@ -177,12 +192,15 @@ namespace BanglaBazarFoodCourt.Controllers
 
         /**
          * Promotions
+         * //TODO: UPDATE ALL VIEWS SINCE I ADDED NAME
          * */
         public ActionResult Promotions()
         {
             var entitites = _context.PromoTable.ToList();
             return View(entitites);
         }
+
+        
 
         public ActionResult EditPromotion(int? id)
         {
@@ -243,6 +261,8 @@ namespace BanglaBazarFoodCourt.Controllers
             }
             return View(temp);
         }
+
+       
 
 
 

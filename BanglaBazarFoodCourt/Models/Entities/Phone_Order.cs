@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web;
 
 namespace BanglaBazarFoodCourt.Models.Entities
 {
+    [DisplayName("Phone Order")]
     public class Phone_Order
     {
         [Key]
@@ -27,8 +29,13 @@ namespace BanglaBazarFoodCourt.Models.Entities
         public int SIN { get; set; }
         public Employee Employee { get; set; }
 
+        [DisplayName("Order Time")]
         public DateTime OrderTime { get; set; }
+
+        [DisplayName("Pickup Time")]
         public DateTime PickupTime { get; set; }
+
+        [DisplayName("Picked Up")]
         public Boolean PickedUp { get; set; }
 
 
