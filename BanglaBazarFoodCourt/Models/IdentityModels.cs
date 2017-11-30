@@ -27,6 +27,10 @@ namespace BanglaBazarFoodCourt.Models
         DbSet<Food_Item> Food_ItemTable { get; set; }
         DbSet<Employee> EmployeeTable { get; set; }
         DbSet<Supervisor> SupervisorTable { get; set; }
+        DbSet<Discounts> DiscountTable { get; set; }
+        DbSet<Contains> Contains_Table { get; set; }
+        DbSet<Phone_Order> Phone_OrderTable { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

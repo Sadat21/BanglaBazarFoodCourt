@@ -207,6 +207,18 @@
     <Compile Include="Migrations\201711292341055_Added Supervisor Table.Designer.cs">
       <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711300341354_Added Discounts Table.cs" />
+    <Compile Include="Migrations\201711300341354_Added Discounts Table.Designer.cs">
+      <DependentUpon>201711300341354_Added Discounts Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300346464_Added Contains Table.cs" />
+    <Compile Include="Migrations\201711300346464_Added Contains Table.Designer.cs">
+      <DependentUpon>201711300346464_Added Contains Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.cs" />
+    <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.Designer.cs">
+      <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities\Contains.cs" />
@@ -325,6 +337,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711292341055_Added Supervisor Table.resx">
       <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300341354_Added Discounts Table.resx">
+      <DependentUpon>201711300341354_Added Discounts Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300346464_Added Contains Table.resx">
+      <DependentUpon>201711300346464_Added Contains Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300405280_Added Phone_Orders Table.resx">
+      <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
