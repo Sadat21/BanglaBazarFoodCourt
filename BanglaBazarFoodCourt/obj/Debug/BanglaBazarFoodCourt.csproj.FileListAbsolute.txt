@@ -234,3 +234,6 @@ C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
