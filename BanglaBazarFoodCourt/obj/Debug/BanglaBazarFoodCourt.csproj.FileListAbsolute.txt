@@ -140,8 +140,9 @@ C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\Bangla
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Properties.Resources.resources
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.CoreCompileInputs.cache
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Properties.Resources.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
