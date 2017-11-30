@@ -187,10 +187,37 @@
     <Compile Include="Migrations\201711112223461_Added_Customer_Table2.Designer.cs">
       <DependentUpon>201711112223461_Added_Customer_Table2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711292309389_Added Promo Table.cs" />
+    <Compile Include="Migrations\201711292309389_Added Promo Table.Designer.cs">
+      <DependentUpon>201711292309389_Added Promo Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292324145_Added Order Table.cs" />
+    <Compile Include="Migrations\201711292324145_Added Order Table.Designer.cs">
+      <DependentUpon>201711292324145_Added Order Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292332268_Added Food_Item Table.cs" />
+    <Compile Include="Migrations\201711292332268_Added Food_Item Table.Designer.cs">
+      <DependentUpon>201711292332268_Added Food_Item Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292334327_Added Employee Table.cs" />
+    <Compile Include="Migrations\201711292334327_Added Employee Table.Designer.cs">
+      <DependentUpon>201711292334327_Added Employee Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292341055_Added Supervisor Table.cs" />
+    <Compile Include="Migrations\201711292341055_Added Supervisor Table.Designer.cs">
+      <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entities\Contains.cs" />
     <Compile Include="Models\Entities\Customer.cs" />
     <Compile Include="Models\DatabaseFunctionsModels.cs" />
+    <Compile Include="Models\Entities\Discounts.cs" />
+    <Compile Include="Models\Entities\Employee.cs" />
+    <Compile Include="Models\Entities\Food_Item.cs" />
+    <Compile Include="Models\Entities\Phone_Order.cs" />
+    <Compile Include="Models\Entities\Promo.cs" />
+    <Compile Include="Models\Entities\Supervisor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Entities\Order.cs" />
@@ -283,6 +310,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711112223461_Added_Customer_Table2.resx">
       <DependentUpon>201711112223461_Added_Customer_Table2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292309389_Added Promo Table.resx">
+      <DependentUpon>201711292309389_Added Promo Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292324145_Added Order Table.resx">
+      <DependentUpon>201711292324145_Added Order Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292332268_Added Food_Item Table.resx">
+      <DependentUpon>201711292332268_Added Food_Item Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292334327_Added Employee Table.resx">
+      <DependentUpon>201711292334327_Added Employee Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292341055_Added Supervisor Table.resx">
+      <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

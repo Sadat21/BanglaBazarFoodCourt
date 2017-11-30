@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using BanglaBazarFoodCourt.Models.Entities;
 
 namespace BanglaBazarFoodCourt.Models
 {
@@ -21,6 +22,11 @@ namespace BanglaBazarFoodCourt.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         DbSet<Customer> CustomerTable { get; set; }
+        DbSet<Order> OrderTable { get; set; }
+        DbSet<Promo> PromoTable { get; set; }
+        DbSet<Food_Item> Food_ItemTable { get; set; }
+        DbSet<Employee> EmployeeTable { get; set; }
+        DbSet<Supervisor> SupervisorTable { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
