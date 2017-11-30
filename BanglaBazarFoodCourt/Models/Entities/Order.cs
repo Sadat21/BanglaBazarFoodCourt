@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,12 +9,12 @@ namespace BanglaBazarFoodCourt.Models
 {
     public class Order
     {
-        [Required]
-        private int orderNo { get; set; }
-        private int customerId { get; set; }
-        private double totalPrice { get; set; }
-        private string orderTime { get; set; }
-        private string pickupTime { get; set; }
-        private DateTime date { get; set; }
+        [Key]
+        public int orderNo { get; set; }
+        public Customer Customer { get; set; }
+        public double totalPrice { get; set; }
+        public string orderTime { get; set; }
+        public string pickupTime { get; set; }
+        public DateTime date { get; set; }
     }
 }

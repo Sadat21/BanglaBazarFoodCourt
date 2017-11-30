@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <ApplicationInsightsResourceId />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,23 +187,69 @@
     <Compile Include="Migrations\201711112223461_Added_Customer_Table2.Designer.cs">
       <DependentUpon>201711112223461_Added_Customer_Table2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711292309389_Added Promo Table.cs" />
+    <Compile Include="Migrations\201711292309389_Added Promo Table.Designer.cs">
+      <DependentUpon>201711292309389_Added Promo Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292324145_Added Order Table.cs" />
+    <Compile Include="Migrations\201711292324145_Added Order Table.Designer.cs">
+      <DependentUpon>201711292324145_Added Order Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292332268_Added Food_Item Table.cs" />
+    <Compile Include="Migrations\201711292332268_Added Food_Item Table.Designer.cs">
+      <DependentUpon>201711292332268_Added Food_Item Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292334327_Added Employee Table.cs" />
+    <Compile Include="Migrations\201711292334327_Added Employee Table.Designer.cs">
+      <DependentUpon>201711292334327_Added Employee Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292341055_Added Supervisor Table.cs" />
+    <Compile Include="Migrations\201711292341055_Added Supervisor Table.Designer.cs">
+      <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300341354_Added Discounts Table.cs" />
+    <Compile Include="Migrations\201711300341354_Added Discounts Table.Designer.cs">
+      <DependentUpon>201711300341354_Added Discounts Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300346464_Added Contains Table.cs" />
+    <Compile Include="Migrations\201711300346464_Added Contains Table.Designer.cs">
+      <DependentUpon>201711300346464_Added Contains Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.cs" />
+    <Compile Include="Migrations\201711300405280_Added Phone_Orders Table.Designer.cs">
+      <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entities\Contains.cs" />
     <Compile Include="Models\Entities\Customer.cs" />
     <Compile Include="Models\DatabaseFunctionsModels.cs" />
+    <Compile Include="Models\Entities\Discounts.cs" />
+    <Compile Include="Models\Entities\Employee.cs" />
+    <Compile Include="Models\Entities\Food_Item.cs" />
+    <Compile Include="Models\Entities\Phone_Order.cs" />
+    <Compile Include="Models\Entities\Promo.cs" />
+    <Compile Include="Models\Entities\Supervisor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Entities\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo_transparent.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -251,6 +298,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Order.cshtml" />
+    <Content Include="Views\Home\Menus.cshtml" />
+    <Content Include="Views\Home\Specials.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -272,6 +322,34 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711112223461_Added_Customer_Table2.resx">
       <DependentUpon>201711112223461_Added_Customer_Table2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292309389_Added Promo Table.resx">
+      <DependentUpon>201711292309389_Added Promo Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292324145_Added Order Table.resx">
+      <DependentUpon>201711292324145_Added Order Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292332268_Added Food_Item Table.resx">
+      <DependentUpon>201711292332268_Added Food_Item Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292334327_Added Employee Table.resx">
+      <DependentUpon>201711292334327_Added Employee Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292341055_Added Supervisor Table.resx">
+      <DependentUpon>201711292341055_Added Supervisor Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300341354_Added Discounts Table.resx">
+      <DependentUpon>201711300341354_Added Discounts Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300346464_Added Contains Table.resx">
+      <DependentUpon>201711300346464_Added Contains Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300405280_Added Phone_Orders Table.resx">
+      <DependentUpon>201711300405280_Added Phone_Orders Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

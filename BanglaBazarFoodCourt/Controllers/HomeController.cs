@@ -36,5 +36,20 @@ namespace BanglaBazarFoodCourt.Controllers
 
             return View();
         }
+
+        public ActionResult Order()
+        {
+            return View();
+        }
+
+        public ActionResult Menus()
+        {
+            return View();
+        }
+
+        public ActionResult Specials()
+        {
+            return View();
+        }
     }
 }
