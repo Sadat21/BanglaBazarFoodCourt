@@ -220,3 +220,8 @@ C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\Bangla
 \\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.CoreCompileInputs.cache
 \\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 \\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPromoTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedOrderTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedFood_ItemTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedEmployeeTable.resources
+\\cs-fs01\Profiles\ug\sadat.islam\Desktop\BanglaBazaar_GOOD\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedSupervisorTable.resources
