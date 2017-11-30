@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Entities.Phone_Order>
+
+@{
+    ViewBag.Title = "Phone Order";
+}
+
+<h2>Phone Order</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.orderTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PickupTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PickedUp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.orderTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PickupTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PickedUp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditPhone_Order", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
