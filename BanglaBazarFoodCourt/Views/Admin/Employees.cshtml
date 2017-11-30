@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Entities.Employee>
+
+@{
+    ViewBag.Title = "Employees";
+}
+
+<h2>Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditEmployee", new { id=item.SIN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SIN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SIN })
+        </td>
+    </tr>
+}
+
+</table>
