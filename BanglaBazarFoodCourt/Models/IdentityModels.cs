@@ -21,15 +21,15 @@ namespace BanglaBazarFoodCourt.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        DbSet<Customer> CustomerTable { get; set; }
-        DbSet<Order> OrderTable { get; set; }
-        DbSet<Promo> PromoTable { get; set; }
-        DbSet<Food_Item> Food_ItemTable { get; set; }
-        DbSet<Employee> EmployeeTable { get; set; }
-        DbSet<Supervisor> SupervisorTable { get; set; }
-        DbSet<Discounts> DiscountTable { get; set; }
-        DbSet<Contains> Contains_Table { get; set; }
-        DbSet<Phone_Order> Phone_OrderTable { get; set; }
+        public DbSet<Customer> CustomerTable { get; set; }
+        public DbSet<Order> OrderTable { get; set; }
+        public DbSet<Promo> PromoTable { get; set; }
+        public DbSet<Food_Item> Food_ItemTable { get; set; }
+        //DbSet<Employee> EmployeeTable { get; set; }
+        public DbSet<Supervisor> SupervisorTable { get; set; }
+        public DbSet<Discounts> DiscountTable { get; set; }
+        public DbSet<Contains> Contains_Table { get; set; }
+        public DbSet<Phone_Order> Phone_OrderTable { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -40,5 +40,7 @@ namespace BanglaBazarFoodCourt.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BanglaBazarFoodCourt.Models.Entities.Employee> Employees { get; set; }
     }
 }

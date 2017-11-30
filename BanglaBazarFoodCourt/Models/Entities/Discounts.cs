@@ -14,6 +14,7 @@ namespace BanglaBazarFoodCourt.Models.Entities
         [ForeignKey("Promo")]
         public int PromoID { get; set; }
         public Promo Promo { get; set; }
+
         [Key]
         [Column(Order = 1)]
         [ForeignKey("Food_Item")]
