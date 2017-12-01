@@ -7,10 +7,13 @@
 <h2>Promotions</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreatePromotion")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.StartDate)
         </th>
@@ -26,6 +29,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.ActionLink(item.Name, "Discount", new { id = item.PromoID })
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.StartDate)
         </td>
         <td>
@@ -36,7 +42,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditPromotion", new { id=item.PromoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PromoID }) |
+            @Html.ActionLink("Change Food", "Details", new { id=item.PromoID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.PromoID })
         </td>
     </tr>

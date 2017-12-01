@@ -16,7 +16,8 @@ namespace BanglaBazarFoodCourt.Controllers
      * 
      *
      * */
-     [Authorize]
+
+    //[Authorize]
     public class AdminController : Controller
     {
         private ApplicationDbContext _context;
@@ -200,6 +201,11 @@ namespace BanglaBazarFoodCourt.Controllers
             return View(entitites);
         }
 
+        public ActionResult CreatePromotion()
+        {
+            return View();
+        }
+
         
 
         public ActionResult EditPromotion(int? id)
@@ -260,6 +266,32 @@ namespace BanglaBazarFoodCourt.Controllers
                 return HttpNotFound();
             }
             return View(temp);
+        }
+
+        /**
+         * Discounts
+         * */
+        public ActionResult Discount(int? id)
+        {
+            
+            if (id == null)
+            {
+                var entitites = _context.DiscountTable.ToList();
+                return View(entitites);
+            }
+            else
+            {
+
+                var entities = _context.DiscountTable.SqlQuery("SELECT * FROM Discounts WHERE PromoID = {0}", new object[] { id });
+                return View(entities.ToList());
+            }
+            
+        }
+
+        public ActionResult CreateDiscount(int? id)
+        {
+            
+            return View();
         }
 
        

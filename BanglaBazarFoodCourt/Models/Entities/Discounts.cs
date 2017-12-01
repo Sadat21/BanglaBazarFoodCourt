@@ -13,13 +13,13 @@ namespace BanglaBazarFoodCourt.Models.Entities
         [Column(Order=0)]
         [ForeignKey("Promo")]
         public int PromoID { get; set; }
-        public Promo Promo { get; set; }
+        public virtual Promo Promo { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [ForeignKey("Food_Item")]
         public int FoodID { get; set; }
-        public Food_Item Food_Item { get; set; }
+        public virtual Food_Item Food_Item { get; set; }
 
     }
 }

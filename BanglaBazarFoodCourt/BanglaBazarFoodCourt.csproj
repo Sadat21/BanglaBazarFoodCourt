@@ -324,6 +324,9 @@
     <Content Include="Views\Admin\EditFoodItem.cshtml" />
     <Content Include="Views\Admin\CreateFoodItem.cshtml" />
     <Content Include="Views\Admin\DeleteFoodItem.cshtml" />
+    <Content Include="Views\Admin\Discount.cshtml" />
+    <Content Include="Views\Admin\CreatePromotion.cshtml" />
+    <Content Include="Views\Admin\CreateDiscount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
