@@ -1,17 +1,71 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2 class="hdr-custom">@ViewBag.Title.</h2>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="hdr-custom">Leave a Message</h3>
+            <p></p>
+            <form>
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control input-block-level" id="inputName" placeholder="Name"/>
+                </div>
+                <div class="form-group input-block-level">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control input-block-level" id="inputEmail" placeholder="Email"/>
+                </div>
+                <div class="form-group input-block-level">
+                    <label>Comment</label>
+                    <textarea class="form-control input-block-level" rows="5" placeholder="Comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" style="float: right;">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h3 class="hdr-custom">Contact Details</h3>
+            <p> </p>
+            <label>Address</label>
+            <address>
+                109 4851 Westwinds Dr, NE<br />
+                Calgary, Alberta<br />
+                T3J 4L4
+            </address>
+            <address>
+                <b>Phone Number:</b> (587) 356-6000
+            </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+            <address>
+                <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+                <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+            </address>
+        </div>
+    </div>
+    <h2 class="hdr-custom" style="text-align:center; margin-top: 50px;">Find Us!</h2>
+    <div class="jumbotron">
+        <div class="container">
+            <!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+                 not working rn; figure out later -->
+            <div id="map"></div>
+            <script type="text/javascript">
+              function initMap() {
+                var uluru = { lat: 51.0997889, lng: -113.96440540000003};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 4,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3270FK13TtqxFHSPSXQn1hu2PRtweOmA&callback=initMap" type="text/javascript">
+            </script>
+
+        </div>
+    </div>
+</div>

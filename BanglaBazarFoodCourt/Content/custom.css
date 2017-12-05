@@ -32,3 +32,55 @@
 .modal-custom {
     width: 50%;
 }
+
+.title-custom {
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+}
+
+.desc-custom {
+    font-size: 16px;
+    margin-top: auto;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.btn-custom {
+    background-color: #ffc948;
+    border-color: #ff9500;
+}
+
+.t-custom {
+    background-color: #ff9500;
+}
+
+.tab-custom {
+    font-family: 'Bree Serif', serif;
+    font-size: 16pt;
+}
+
+.tbl-custom { 
+    text-align: center;
+}
+
+.content-custom {
+    margin-top: 50px;
+}
+
+.hdr-custom {
+    font-family: 'Bree Serif', serif;
+}
+
+
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    // Make inputs at least the height of their button counterpart .box-sizing(border-box);
+    // Makes inputs behave like true block-level elements
+}
+
+.price {
+    text-align: right;
+    font-size: 16px;
+}
