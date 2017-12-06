@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BanglaBazarFoodCourt/Content/bootstrap.min.css
+.vs/BanglaBazarFoodCourt/v15/.suo
+.vs/BanglaBazarFoodCourt/v15/sqlite3/storage.ide
