@@ -10,31 +10,35 @@
         <div class="col-md-6">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
+                    <div class="panel-heading tab-custom" role="tab" id="headingOne">
                         <h4 class="panel-title tab-custom">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Food Item Type #1
+                                Lunch
                             </a>
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            text text text text (do a list of thumbnails of food items)
-                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Donair <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Sheekh Kebab <span class="pull-right"><b>Price</b></span></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
+                    <div class="panel-heading tab-custom" role="tab" id="headingTwo">
                         <h4 class="panel-title tab-custom">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                Food Item Type #2
+                                Drinks
                             </a>
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            text text text text (do a list of thumbnails of food items)
-                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pepsi <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Water <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Orange Juice <span class="pull-right"><b>Price</b></span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -57,6 +61,31 @@
                         <td>$20</td> <!-- also add a button to cancel & delete the order -->
                     </tr>
                 </table>
+
+                <div class="panel-footer" style="height: 55px;">
+                    <input class="btn btn-default btn-custom pull-right" type="submit" value="Submit"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for specifying how may food items customer wants to order -->
+    <div id="orderDetails" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-custom"> 
+            <!-- food item content -->
+            <div class="modal-content">
+                <div class="modal-header modal-sm">
+                    <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title title-custom">Food Item Name</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        TO ADD: increment/decrement counters for customer to specify quantity
+                        <p><p>
+                            <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
