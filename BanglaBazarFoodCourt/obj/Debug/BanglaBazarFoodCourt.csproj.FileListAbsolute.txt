@@ -1,243 +1,83 @@
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\csc.exe
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\vbc.exe
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll.config
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.pdb
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Antlr3.Runtime.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Newtonsoft.Json.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Owin.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Helpers.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Mvc.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Optimization.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Razor.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\WebGrease.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Helpers.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Mvc.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Optimization.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Razor.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Antlr3.Runtime.pdb
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Newtonsoft.Json.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
-C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\csc.exe
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\vbc.exe
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll.config
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.pdb
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Antlr3.Runtime.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Newtonsoft.Json.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Owin.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Helpers.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Mvc.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Optimization.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Razor.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\WebGrease.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Helpers.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Mvc.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Optimization.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.Razor.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Antlr3.Runtime.pdb
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Newtonsoft.Json.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Properties.Resources.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.CoreCompileInputs.cache
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\csc.exe
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\vbc.exe
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll.config
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.pdb
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Antlr3.Runtime.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\EntityFramework.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Newtonsoft.Json.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Owin.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Helpers.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Mvc.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Optimization.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Razor.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\WebGrease.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Helpers.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Mvc.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Optimization.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.Razor.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Antlr3.Runtime.pdb
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Newtonsoft.Json.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\EntityFramework.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPromoTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedOrderTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedFood_ItemTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedEmployeeTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedSupervisorTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedNameParametertoPromo.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Properties.Resources.resources
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
-C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
-=======
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPromoTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedOrderTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedFood_ItemTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedEmployeeTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedSupervisorTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
-C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedNameParametertoPromo.resources
->>>>>>> master
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\csc.exe
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\vbc.exe
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll.config
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\BanglaBazarFoodCourt.pdb
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Antlr3.Runtime.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\EntityFramework.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Newtonsoft.Json.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Owin.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Helpers.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Mvc.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Optimization.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Razor.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\WebGrease.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Helpers.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Mvc.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Optimization.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.Razor.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\System.Web.WebPages.Razor.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Antlr3.Runtime.pdb
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Newtonsoft.Json.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\EntityFramework.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\EntityFramework.SqlServer.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.InitialModel.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.Added_Customer_Table2.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPromoTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedOrderTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedFood_ItemTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedEmployeeTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedSupervisorTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedNameParametertoPromo.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Properties.Resources.resources
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
+C:\Users\sadat.islam\Desktop\BanglaBazar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
