@@ -3,5 +3,61 @@
     ViewBag.Title = "Order Now!";
 }
 
-<h2>Order</h2>
+<h2 class="hdr-custom">Order</h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title tab-custom">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Food Item Type #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            text text text text (do a list of thumbnails of food items)
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title tab-custom">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Food Item Type #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            text text text text (do a list of thumbnails of food items)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading tab-custom">Your Order</div>
+
+                <!-- Table -->
+                <table class="table table-striped tbl-custom">
+                    <tr> <!-- table headers -->
+                        <td><b>Name</b></td>
+                        <td><b>Quantity</b></td>
+                        <td><b>Price</b></td>
+                    </tr>
+                    <tr>
+                        <td>Shawarma</td>
+                        <td>- 12 +</td> <!-- TODO: add buttons to inc/dec the quantity ordered -->
+                        <td>$20</td> <!-- also add a button to cancel & delete the order -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

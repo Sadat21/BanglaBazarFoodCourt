@@ -146,6 +146,7 @@ C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\Bangla
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\csc.exe
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -229,3 +230,14 @@ C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaB
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 C:\Users\sadat.islam\Desktop\BanglaBazaar\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
+=======
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPromoTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedOrderTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedFood_ItemTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedEmployeeTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedSupervisorTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedDiscountsTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedContainsTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedPhone_OrdersTable.resources
+C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.AddedNameParametertoPromo.resources
+>>>>>>> master

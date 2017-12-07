@@ -23,7 +23,7 @@ namespace BanglaBazarFoodCourt.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = _context.Database.ExecuteSqlCommand("INSERT INTO Customers(name, contactNo) VALUES ('Sadat', 123)");
+//            ViewBag.Message = _context.Database.ExecuteSqlCommand("INSERT INTO Customers(name, contactNo) VALUES ('Sadat', 123)");
 
             
 
