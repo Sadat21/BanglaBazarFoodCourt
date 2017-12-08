@@ -10,18 +10,47 @@
         <div class="col-md-6">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
                 <div class="panel panel-default">
-                    <div class="panel-heading tab-custom" role="tab" id="headingOne">
+                    <div class="panel-heading tab-custom" role="tab" id="appetizer">
                         <h4 class="panel-title tab-custom">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Lunch
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseAppe" aria-expanded="true" aria-controls="collapseAppe">
+                                Appetizers
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="collapseAppe" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="appetizer">
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Burger <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pizza <span class="pull-right"><b>Price</b></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading tab-custom" role="tab" id="entree">
+                        <h4 class="panel-title tab-custom">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEnt" aria-expanded="true" aria-controls="collapseEnt">
+                                Entrées
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseEnt" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="entree">
                         <ul class="list-group">
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma <span class="pull-right"><b>Price</b></span></li>
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Donair <span class="pull-right"><b>Price</b></span></li>
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Sheekh Kebab <span class="pull-right"><b>Price</b></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading tab-custom" role="tab" id="dssrt">
+                        <h4 class="panel-title tab-custom">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseDst" aria-expanded="true" aria-controls="collapseDst">
+                                Desserts
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dssrt">
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Chocolate Cheese Cake <span class="pull-right"><b>Price</b></span></li>
                         </ul>
                     </div>
                 </div>
