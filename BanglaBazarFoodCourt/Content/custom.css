@@ -3,6 +3,10 @@
     border: none;
 }
 
+.thumbnail-custom:hover {
+    cursor: pointer;
+}
+
 .navbar-custom {
     background-color: #ff9500;
     border-color: #ff9500;
@@ -206,4 +210,25 @@
     background: url(https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/22089448_345175315909932_8708805111431953478_n.png?oh=18cc52bb1c3f652c920ba18aaad522d9&oe=5AC5A5DF) no-repeat;
     background-size: contain;
     height: 45vw;
+}
+
+.food-type {
+    text-align: center;
+    padding-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-color: #ff9500;
+    text-decoration-style: solid;
+    text-underline-position: under;
+}
+
+.ft-nav {
+    border: none !important;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 2px;
+    border-radius: unset;
+}
+
+.ft-nav:hover {
+    background-color: #ffc948;
 }

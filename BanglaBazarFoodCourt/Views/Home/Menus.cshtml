@@ -8,8 +8,30 @@
 <h2 class="hdr-custom">@ViewBag.Title</h2>
 
 <div class="container">
+
+    <div class="text-center">
+        <div class="btn-group">
+            <a class="btn btn-default ft-nav" href="#appetizer">Appetizers</a>
+            <a class="btn btn-default ft-nav" href="#entree">Entrées</a>
+            <a class="btn btn-default ft-nav" href="#dessert">Desserts</a>
+            <a class="btn btn-default ft-nav" href="#drink">Drinks</a>
+        </div>
+    </div>
+
     <div class="row">
-        
+       
+        <a name="#appetizer"></a>
+        <h2 class="hdr-custom food-type">Appetizers</h2>
+
+        <a name="entree"></a>
+        <h2 class="hdr-custom food-type">Entrées</h2>
+
+        <a name="dessert"></a>
+        <h2 class="hdr-custom food-type">Desserts</h2>
+
+        <a name="drink"></a>
+        <h2 class="hdr-custom food-type">Drinks</h2>
+
             @{ 
                 
                 for (int i = 0; i < Model.Count(); )
@@ -25,6 +47,10 @@
                                     }
 
                                     <img src="@imgSrc" data-toggle="modal" data-target="#@Model.ElementAt(i).FoodID" width="300" height="300" />
+                                    <div class="caption">
+                                        <h4 class="hdr-custom" style="text-align:center;">@Model.ElementAt(i).Name</h4>
+                                    </div>
+
 
 
                                 </div>
@@ -47,7 +73,7 @@
                                                                 <div class="col-md-6 desc-custom">
                                                                     <i>@Model.ElementAt(i).Description</i>
                                                                     <p><p>
-                                                                        <h4 class="price"><b>@Model.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                        <h4 class="price"><b>$@Model.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
                                                                     </p>
                                                                 </div>
                                                             </div>
