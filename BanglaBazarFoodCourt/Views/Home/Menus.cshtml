@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Entities.Food_Item>
+
+
 @{
     ViewBag.Title = "Menus";
 }
@@ -7,48 +9,63 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-        </div>
         
-        <div class="col-md-4">
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-            <div class="thumbnail thumbnail-custom"><img src="http://via.placeholder.com/300x300" data-toggle="modal" data-target="#viewFood"/></div>
-        </div>
-    </div>
+            @{ 
+                
+                for (int i = 0; i < Model.Count(); )
+                {
+                    
+                        <div class="col-md-4">
+                            @for (int j = 0; j < 3 && i < Model.Count(); j++, i++)
+                            {
+                                <div class="thumbnail thumbnail-custom">
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.ElementAt(i).Picture);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                    }
 
-    <!-- modal for detailed information about the food items -->
-    <div id="viewFood" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-custom">
-            <!-- food item content -->
-            <div class="modal-content">
-                <div class="modal-header modal-lg">
-                    <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title title-custom">Food Item Name</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6"><img src="http://via.placeholder.com/300x300" /></div>
-                            <div class="col-md-6 desc-custom">
-                                    <i>Description of the food item here.</i>
-                                <p><p>
-                                    <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                                </p>
-                            </div>
+                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.ElementAt(i).FoodID" width="300" height="300" />
+
+
+                                </div>
+                                <!-- modal for detailed information about the food items -->
+                                        <div id="@Model.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                            <div class="modal-dialog modal-custom">
+                                                <!-- food item content -->
+                                                <div class="modal-content">
+                                                    <div class="modal-header modal-lg">
+                                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title title-custom">@Model.ElementAt(i).Name</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+
+                                                                    <img src="@imgSrc" width="300" height="300">
+                                                                </div>
+                                                                <div class="col-md-6 desc-custom">
+                                                                    <i>@Model.ElementAt(i).Description</i>
+                                                                    <p><p>
+                                                                        <h4 class="price"><b>@Model.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        }
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    
+                    
+
+                }
+             }
+
+
+      </div>
+
+    
 </div>

@@ -44,7 +44,8 @@ namespace BanglaBazarFoodCourt.Controllers
 
         public ActionResult Menus()
         {
-            return View();
+            var entities = _context.Food_ItemTable.ToList();
+            return View(entities);
         }
 
         public ActionResult Specials()

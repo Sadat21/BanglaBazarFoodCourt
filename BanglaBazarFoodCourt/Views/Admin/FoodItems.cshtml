@@ -50,7 +50,12 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Picture)
+            @{
+                var base64 = Convert.ToBase64String(item.Picture);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+
+            <img src="@imgSrc" width="200" height="200"/>
                         
         </td>
         <td>
