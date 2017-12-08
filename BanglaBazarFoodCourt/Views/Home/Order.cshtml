@@ -3,12 +3,70 @@
     ViewBag.Title = "Order Now!";
 }
 
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- increment/decrement counter source: http://jsfiddle.net/laelitenetwork/puJ6G/ -->
+<script>
+    jQuery(document).ready(function () {
+        // This button will increment the value
+        $('.qtyplus').click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                $('input[name=' + fieldName + ']').val(currentVal + 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+        // This button will decrement the value till 0
+        $(".qtyminus").click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > 0) {
+                // Decrement one
+                $('input[name=' + fieldName + ']').val(currentVal - 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+    });
+
+</script>
+
 <h2 class="hdr-custom">Order</h2>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                <div class="panel panel-default">
+                    <div class="panel-heading tab-custom" role="tab" id="combo">
+                        <h4 class="panel-title tab-custom">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCmb" aria-expanded="true" aria-controls="collapseCmb">
+                                Combos & Promotions
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseCmb" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="combo">
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Chapati & Fuska Combo <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma & Donair Combo <span class="pull-right"><b>Price</b></span></li>
+                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Sheekh Kebab & Daal Combo <span class="pull-right"><b>Price</b></span></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading tab-custom" role="tab" id="appetizer">
                         <h4 class="panel-title tab-custom">
@@ -17,7 +75,7 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseAppe" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="appetizer">
+                    <div id="collapseAppe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="appetizer">
                         <ul class="list-group">
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Burger <span class="pull-right"><b>Price</b></span></li>
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pizza <span class="pull-right"><b>Price</b></span></li>
@@ -32,7 +90,7 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseEnt" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="entree">
+                    <div id="collapseEnt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="entree">
                         <ul class="list-group">
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma <span class="pull-right"><b>Price</b></span></li>
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Donair <span class="pull-right"><b>Price</b></span></li>
@@ -48,7 +106,7 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseDst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dssrt">
+                    <div id="collapseDst" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dssrt">
                         <ul class="list-group">
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Chocolate Cheese Cake <span class="pull-right"><b>Price</b></span></li>
                         </ul>
@@ -62,7 +120,7 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <ul class="list-group">
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pepsi <span class="pull-right"><b>Price</b></span></li>
                             <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Water <span class="pull-right"><b>Price</b></span></li>
@@ -83,16 +141,18 @@
                         <td><b>Name</b></td>
                         <td><b>Quantity</b></td>
                         <td><b>Price</b></td>
+                        <td>&emsp;</td>
                     </tr>
                     <tr>
                         <td>Shawarma</td>
                         <td>- 12 +</td> <!-- TODO: add buttons to inc/dec the quantity ordered -->
                         <td>$20</td> <!-- also add a button to cancel & delete the order -->
+                        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" class="text-center">&times;</span></button></td>
                     </tr>
                 </table>
 
-                <div class="panel-footer" style="height: 55px;">
-                    <input class="btn btn-default btn-custom pull-right" type="submit" value="Submit"></input>
+                <div class="panel-footer" style="height: 75px;">
+                    <h4 class="price"><b>Total Price</b>&emsp;<input class="btn btn-default btn-custom" type="submit" value="Submit"></input></h4>
                 </div>
             </div>
         </div>
@@ -109,7 +169,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        TO ADD: increment/decrement counters for customer to specify quantity
+                        <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                            <div class="form-group">
+                                <input type='text' name='quantity' value='0' class='qty form-control' />
+                            </div>
+                                <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
+                        </form>
                         <p><p>
                             <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
                         </p>
