@@ -2,33 +2,41 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="jumbotron jmb-img">
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2 class="hdr-custom">Get Updated!</h2>
+        <div class="fb-page" data-href="https://www.facebook.com/banglabazarfoodcourt/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/banglabazarfoodcourt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/banglabazarfoodcourt/">Bangla Bazar FoodCourt</a></blockquote></div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2 class="hdr-custom">Customer Reviews</h2>
+        <div id="google-reviews"></div>
+
+        <!-- to embed google reviews: https://www.launch2success.com/guide/display-google-reviews-website-2017/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIPICaysPrg13mlhD7ZOpEt0rZdr4Zkc8&signed_in=true&libraries=places"></script>
+
+        <script>
+            jQuery(document).ready(function( $ ) {
+               $("#google-reviews").googlePlaces({
+                    placeId: 'ChIJR2tUwoJkcVMR42o6YD9fKBg'
+                  , render: ['reviews']
+                  , min_rating: 4
+               });
+            });
+        </script>
     </div>
 </div>
-
-
-<li>@Html.ActionLink("Admin", "Index", "Admin")</li>
