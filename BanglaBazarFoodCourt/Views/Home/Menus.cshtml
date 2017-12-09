@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Entities.Food_Item>
+﻿@model BanglaBazarFoodCourt.ViewModels.MenuViewModel
 
 
 @{
@@ -7,7 +7,7 @@
 
 <h2 class="hdr-custom">@ViewBag.Title</h2>
 
-<div class="container">
+<tr class="container">
 
     <div class="text-center">
         <div class="btn-group">
@@ -18,50 +18,40 @@
         </div>
     </div>
 
-    <div class="row">
-       
-        <a name="#appetizer"></a>
+    <tr class="row">
+
+        <a name="#appetizer">&emsp;<br>&emsp;</a>
         <h2 class="hdr-custom food-type">Appetizers</h2>
+        <table class="table">
+            @{
 
-        <a name="entree"></a>
-        <h2 class="hdr-custom food-type">Entrées</h2>
-
-        <a name="dessert"></a>
-        <h2 class="hdr-custom food-type">Desserts</h2>
-
-        <a name="drink"></a>
-        <h2 class="hdr-custom food-type">Drinks</h2>
-
-            @{ 
-                
-                for (int i = 0; i < Model.Count(); )
+                for (int i = 0; i < Model.Appetizer.Count();)
                 {
-                    
-                        <div class="col-md-4">
-                            @for (int j = 0; j < 3 && i < Model.Count(); j++, i++)
-                            {
-                                <div class="thumbnail thumbnail-custom">
+
+                    <tr>
+                        @for (int j = 0; j < 3 && i < Model.Appetizer.Count(); j++, i++)
+                        {
+                            <div class="thumbnail thumbnail-custom">
+                                <td>
                                     @{
-                                        var base64 = Convert.ToBase64String(Model.ElementAt(i).Picture);
+                                        var base64 = Convert.ToBase64String(Model.Appetizer.ElementAt(i).Picture);
                                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
                                     }
 
-                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.ElementAt(i).FoodID" width="300" height="300" />
+                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.Appetizer.ElementAt(i).FoodID" width="364" height="364" style="margin:auto;display:block;" />
                                     <div class="caption">
-                                        <h4 class="hdr-custom" style="text-align:center;">@Model.ElementAt(i).Name</h4>
+                                        <h4 class="hdr-custom" style="text-align:center;">@Model.Appetizer.ElementAt(i).Name</h4>
                                     </div>
-
-
-
-                                </div>
+                                </td>
+                            </div>
                                 <!-- modal for detailed information about the food items -->
-                                        <div id="@Model.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                        <div id="@Model.Appetizer.ElementAt(i).FoodID" class="modal fade" role="dialog">
                                             <div class="modal-dialog modal-custom">
                                                 <!-- food item content -->
                                                 <div class="modal-content">
                                                     <div class="modal-header modal-lg">
                                                         <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title title-custom">@Model.ElementAt(i).Name</h4>
+                                                        <h4 class="modal-title title-custom">@Model.Appetizer.ElementAt(i).Name</h4>
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="container">
@@ -71,9 +61,9 @@
                                                                     <img src="@imgSrc" width="300" height="300">
                                                                 </div>
                                                                 <div class="col-md-6 desc-custom">
-                                                                    <i>@Model.ElementAt(i).Description</i>
+                                                                    <i>@Model.Appetizer.ElementAt(i).Description</i>
                                                                     <p><p>
-                                                                        <h4 class="price"><b>$@Model.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                        <h4 class="price"><b>$@Model.Appetizer.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -82,16 +72,198 @@
                                                 </div>
                                             </div>
                                         </div>
-                        }
-                        </div>
-                    
-                    
+                                        }
+                    </tr>
 
-                }
-             }
+                                        }
+            }
+        </table>
 
 
-      </div>
+        <a name="entree">&emsp;<br>&emsp;</a>
+        <h2 class="hdr-custom food-type">Entrées</h2>
+        <table class="table">
+            @{
 
-    
-</div>
+                for (int i = 0; i < Model.Entree.Count();)
+                {
+
+                    <tr>
+                        @for (int j = 0; j < 3 && i < Model.Entree.Count(); j++, i++)
+                        {
+
+                            <div class="thumbnail thumbnail-custom">
+                                <td>
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.Entree.ElementAt(i).Picture);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                    }
+
+                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.Entree.ElementAt(i).FoodID" width="364" height="364" style="margin:auto;display:block;"  />
+                                    <div class="caption">
+                                        <h4 class="hdr-custom" style="text-align:center;">@Model.Entree.ElementAt(i).Name</h4>
+                                    </div>
+                                </td>
+                            </div>
+
+                                <!-- modal for detailed information about the food items -->
+                                        <div id="@Model.Entree.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                            <div class="modal-dialog modal-custom">
+                                                <!-- food item content -->
+                                                <div class="modal-content">
+                                                    <div class="modal-header modal-lg">
+                                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title title-custom">@Model.Entree.ElementAt(i).Name</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+
+                                                                    <img src="@imgSrc" width="300" height="300">
+                                                                </div>
+                                                                <div class="col-md-6 desc-custom">
+                                                                    <i>@Model.Entree.ElementAt(i).Description</i>
+                                                                    <p><p>
+                                                                        <h4 class="price"><b>$@Model.Entree.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        }
+                    </tr>
+
+                                        }
+            }
+        </table>
+
+        <a name="dessert">&emsp;<br>&emsp;</a>
+        <h2 class="hdr-custom food-type">Desserts</h2>
+        <table class="table">
+
+            @{
+
+                for (int i = 0; i < Model.Dessert.Count();)
+                {
+
+                    <tr>
+                        @for (int j = 0; j < 3 && i < Model.Dessert.Count(); j++, i++)
+                        {
+                            <div class="thumbnail thumbnail-custom">
+                                <td>
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.Dessert.ElementAt(i).Picture);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                    }
+
+                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.Dessert.ElementAt(i).FoodID" width="364" height="364" style="margin:auto;display:block;" />
+                                    <div class="caption">
+                                        <h4 class="hdr-custom" style="text-align:center;">@Model.Dessert.ElementAt(i).Name</h4>
+                                    </div>
+                                </td>
+                            </div>
+                                <!-- modal for detailed information about the food items -->
+                                    <div id="@Model.Dessert.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                        <div class="modal-dialog modal-custom">
+                                            <!-- food item content -->
+                                            <div class="modal-content">
+                                                <div class="modal-header modal-lg">
+                                                    <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title title-custom">@Model.Dessert.ElementAt(i).Name</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+                                                                <img src="@imgSrc" width="300" height="300">
+                                                            </div>
+                                                            <div class="col-md-6 desc-custom">
+                                                                <i>@Model.Dessert.ElementAt(i).Description</i>
+                                                                <p><p>
+                                                                    <h4 class="price"><b>$@Model.Dessert.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+                    </tr>
+
+                                    }
+            }
+        </table>
+
+        <a name="drink">&emsp;<br>&emsp;</a>
+        <h2 class="hdr-custom food-type">Drinks</h2>
+        <table class="table">
+            @{
+
+                for (int i = 0; i < Model.Drink.Count();)
+                {
+
+                    <tr>
+                        @for (int j = 0; j < 3 && i < Model.Drink.Count(); j++, i++)
+                        {
+                            <div class="thumbnail thumbnail-custom">
+                                <td>
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.Drink.ElementAt(i).Picture);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                    }
+
+                                    <img src="@imgSrc" data-toggle="modal" data-target="#@Model.Drink.ElementAt(i).FoodID" width="364" height="364" style="margin:auto;display:block;" />
+                                    <div class="caption">
+                                        <h4 class="hdr-custom" style="text-align:center;">@Model.Drink.ElementAt(i).Name</h4>
+                                    </div>
+                                </td>
+                            </div>
+                                <!-- modal for detailed information about the food items -->
+                                    <div id="@Model.Drink.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                        <div class="modal-dialog modal-custom">
+                                            <!-- food item content -->
+                                            <div class="modal-content">
+                                                <div class="modal-header modal-lg">
+                                                    <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title title-custom">@Model.Drink.ElementAt(i).Name</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+                                                                <img src="@imgSrc" width="300" height="300">
+                                                            </div>
+                                                            <div class="col-md-6 desc-custom">
+                                                                <i>@Model.Drink.ElementAt(i).Description</i>
+                                                                <p><p>
+                                                                    <h4 class="price"><b>$@Model.Drink.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+                    </tr>
+
+                                    }
+            }
+        </table>
+
+
+
+
+
+
+
+    </div>

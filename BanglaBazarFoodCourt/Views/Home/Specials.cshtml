@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<BanglaBazarFoodCourt.Models.Entities.Promo>
 @{
     ViewBag.Title = "Specials";
 }
@@ -58,69 +58,29 @@
 </div>
 
 <div class="container" style="margin-top: 50px;">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Chapati & Fuska Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-            <p></p>
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Chapati & Fuska Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Shawarma & Donair Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-            <p></p>
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Chapati & Fuska Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Sheekh Kebab & Daal Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-            <p></p>
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="hdr-custom">Chapati & Fuska Combo</h3>
-                    <p><i>Description</i></p>
-                    <p>
-                        <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <table class="table">
+        @{
+            for(int i = 0; i < Model.Count();)
+            {
+            <tr>
+                @for (int j = 0; j < 3 && i < Model.Count(); j++, i++)
+                {
+                             
+                    <td width="300">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3 class="hdr-custom">@Model.ElementAt(i).Name</h3>
+                                <p><i>Description FIX ME</i></p>
+                                <p>
+                                    <h4 class="price"><b>@Model.ElementAt(i).Discount&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                   
+                }
+            </tr>
+            }
+        }
+    </table>
 </div>

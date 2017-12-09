@@ -22,5 +22,6 @@ namespace BanglaBazarFoodCourt.Models.Entities
 
         public double Discount { get; set; }
 
+
     }
 }
