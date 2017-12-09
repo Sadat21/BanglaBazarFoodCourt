@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="jumbotron jmb-img">
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="hdr-custom">Get Updated!</h2>
+        <div class="fb-page" data-href="https://www.facebook.com/banglabazarfoodcourt/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/banglabazarfoodcourt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/banglabazarfoodcourt/">Bangla Bazar FoodCourt</a></blockquote></div>
+    </div>
+    <div class="col-md-6">
+        <h2 class="hdr-custom">Customer Reviews</h2>
+        <div id="google-reviews"></div>
+
+        <!-- to embed google reviews: https://www.launch2success.com/guide/display-google-reviews-website-2017/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIPICaysPrg13mlhD7ZOpEt0rZdr4Zkc8&signed_in=true&libraries=places"></script>
+
+        <script>
+            jQuery(document).ready(function( $ ) {
+               $("#google-reviews").googlePlaces({
+                    placeId: 'ChIJR2tUwoJkcVMR42o6YD9fKBg'
+                  , render: ['reviews']
+                  , min_rating: 4
+               });
+            });
+        </script>
+    </div>
+</div>
