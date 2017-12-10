@@ -234,3 +234,7 @@
 .ft-nav:hover {
     background-color: #ffc948;
 }
+
+.menus {
+    border: none!important;
+}
