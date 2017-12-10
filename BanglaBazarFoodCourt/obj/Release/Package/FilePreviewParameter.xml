@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="BanglaBazaarFoodCourt" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Sadat\ Msi\\OneDrive\\University\\Sadat_Documents\\Third\ Year\\Fall\ 2017\\CPSC\ 471\\BanglaBazar\\BanglaBazarFoodCourt\\BanglaBazarFoodCourt\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Sadat\ Msi\\OneDrive\\University\\Sadat_Documents\\Third\ Year\\Fall\ 2017\\CPSC\ 471\\BanglaBazar\\BanglaBazarFoodCourt\\BanglaBazarFoodCourt\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Server=tcp:bbfc.database.windows.net,1433;Initial Catalog=BBFC_DB;Persist Security Info=False;User ID=sadatislam;Password=@10171897Aa;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sadat\ Msi\\OneDrive\\University\\Sadat_Documents\\Third\ Year\\Fall\ 2017\\CPSC\ 471\\BanglaBazar\\BanglaBazarFoodCourt\\BanglaBazarFoodCourt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

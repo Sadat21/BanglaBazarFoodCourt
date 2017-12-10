@@ -1,4 +1,5 @@
 ﻿using BanglaBazarFoodCourt.Models;
+using BanglaBazarFoodCourt.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,13 +45,26 @@ namespace BanglaBazarFoodCourt.Controllers
 
         public ActionResult Menus()
         {
-            var entities = _context.Food_ItemTable.ToList();
-            return View(entities);
+
+            var entree = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Entree' ");
+            var appetizer = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Appetizers' ");
+            var dessert = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Dessert' ");
+            var drink = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Drink' ");
+
+            MenuViewModel toBeSent = new MenuViewModel
+            {
+                Dessert = dessert,
+                Entree = entree,
+                Appetizer = appetizer,
+                Drink = drink
+            };
+            return View(toBeSent);
         }
 
         public ActionResult Specials()
         {
-            return View();
+            var entities = _context.PromoTable.ToList();
+            return View(entities);
         }
     }
 }
