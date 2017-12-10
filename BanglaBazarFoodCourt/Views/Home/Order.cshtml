@@ -1,4 +1,5 @@
-﻿
+﻿@model BanglaBazarFoodCourt.ViewModels.OrderViewModel
+
 @{
     ViewBag.Title = "Order Now!";
 }
@@ -11,35 +12,35 @@
         $('.qtyplus').click(function (e) {
             // Stop acting like a button
             e.preventDefault();
-            // Get the field name
-            fieldName = $(this).attr('field');
             // Get its current value
-            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            var currentVal = parseFloat($('input[name=\'quantity\']').val());
+            var currentPrice = parseFloat($('input[name=\'price\']').val());
             // If is not undefined
             if (!isNaN(currentVal)) {
                 // Increment
-                $('input[name=' + fieldName + ']').val(currentVal + 1);
+                currentVal = $('input[name=\'quantity\']').val(currentVal + 1);
             } else {
                 // Otherwise put a 0 there
-                $('input[name=' + fieldName + ']').val(0);
+                currentVal = $('input[name=\'quantity\']').val(0);
             }
+            $('input[name=\'orderPrice\']').val(currentPrice * currentVal);
         });
         // This button will decrement the value till 0
         $(".qtyminus").click(function (e) {
             // Stop acting like a button
             e.preventDefault();
-            // Get the field name
-            fieldName = $(this).attr('field');
             // Get its current value
-            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            var currentVal = parseFloat($('input[name=\'quantity\']').val());
+            var currentPrice = parseFloat($('input[name=\'price\']').val());
             // If it isn't undefined or its greater than 0
             if (!isNaN(currentVal) && currentVal > 0) {
                 // Decrement one
-                $('input[name=' + fieldName + ']').val(currentVal - 1);
+                currentVal = $('input[name=\'quantity\']').val(currentVal - 1);
             } else {
                 // Otherwise put a 0 there
-                $('input[name=' + fieldName + ']').val(0);
+                currentVal = $('input[name=\'quantity\']').val(0);
             }
+            $('input[name=\'orderPrice\']').val(parseFloat(currentPrice * currentVal));
         });
     });
 
@@ -61,9 +62,41 @@
                     </div>
                     <div id="collapseCmb" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="combo">
                         <ul class="list-group">
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Chapati & Fuska Combo <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma & Donair Combo <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Sheekh Kebab & Daal Combo <span class="pull-right"><b>Price</b></span></li>
+                            @for (int i = 0; i < Model.Promo.Count(); i++)
+                            {
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Promo.ElementAt(i).PromoID">@Model.Promo.ElementAt(i).Name <span class="pull-right"><b>$@Model.Promo.ElementAt(i).Discount</b></span></li>
+
+                                <!-- modal for specifying how may food items customer wants to order -->
+                                <div id="@Model.Promo.ElementAt(i).PromoID" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-custom">
+                                        <!-- food item content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-sm">
+                                                <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title title-custom">@Model.Promo.ElementAt(i).Name</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' step="any" />
+                                                        <div class="form-group">
+                                                            <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                        </div>
+                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' step="any" />
+                                                    </form>
+                                                    <p><p>
+                                                        <h4 class="price">
+                                                            <input value="@Model.Promo.ElementAt(i).Discount" name="price" type="hidden"/>
+                                                            <b><input name="orderPrice" value="@Model.Promo.ElementAt(i).Discount" type="text" />&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a>
+                                                        </h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
                         </ul>
                     </div>
                 </div>
@@ -77,8 +110,38 @@
                     </div>
                     <div id="collapseAppe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="appetizer">
                         <ul class="list-group">
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Burger <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pizza <span class="pull-right"><b>Price</b></span></li>
+                            @for (int i = 0; i < Model.Appetizer.Count(); i++)
+                            {
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Appetizer.ElementAt(i).FoodID">@Model.Appetizer.ElementAt(i).Name <span class="pull-right"><b>$@Model.Appetizer.ElementAt(i).Price</b></span></li>
+
+                                <!-- modal for specifying how may food items customer wants to order -->
+                                <div id="@Model.Appetizer.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-custom">
+                                        <!-- food item content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-sm">
+                                                <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title title-custom">@Model.Appetizer.ElementAt(i).Name</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                                                        <div class="form-group">
+                                                            <input type='text' name='quantity' value='0' class='qty form-control' />
+                                                        </div>
+                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
+                                                    </form>
+                                                    <p><p>
+                                                        <h4 class="price"><b>@Model.Appetizer.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
                         </ul>
                     </div>
                 </div>
@@ -92,9 +155,38 @@
                     </div>
                     <div id="collapseEnt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="entree">
                         <ul class="list-group">
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Shawarma <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Donair <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Sheekh Kebab <span class="pull-right"><b>Price</b></span></li>
+                            @for (int i = 0; i < Model.Entree.Count(); i++)
+                            {
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Entree.ElementAt(i).FoodID">@Model.Entree.ElementAt(i).Name <span class="pull-right"><b>$@Model.Entree.ElementAt(i).Price</b></span></li>
+
+                                <!-- modal for specifying how may food items customer wants to order -->
+                                <div id="@Model.Entree.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-custom">
+                                        <!-- food item content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-sm">
+                                                <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title title-custom">@Model.Entree.ElementAt(i).Name</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                                                        <div class="form-group">
+                                                            <input type='text' name='quantity' value='0' class='qty form-control' />
+                                                        </div>
+                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
+                                                    </form>
+                                                    <p><p>
+                                                        <h4 class="price"><b>@Model.Entree.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
                         </ul>
                     </div>
                 </div>
@@ -108,7 +200,38 @@
                     </div>
                     <div id="collapseDst" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dssrt">
                         <ul class="list-group">
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Chocolate Cheese Cake <span class="pull-right"><b>Price</b></span></li>
+                            @for (int i = 0; i < Model.Dessert.Count(); i++)
+                            {
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Dessert.ElementAt(i).FoodID">@Model.Dessert.ElementAt(i).Name <span class="pull-right"><b>$@Model.Dessert.ElementAt(i).Price</b></span></li>
+
+                                <!-- modal for specifying how may food items customer wants to order -->
+                                <div id="@Model.Dessert.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-custom">
+                                        <!-- food item content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-sm">
+                                                <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title title-custom">@Model.Dessert.ElementAt(i).Name</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                                                        <div class="form-group">
+                                                            <input type='text' name='quantity' value='0' class='qty form-control' />
+                                                        </div>
+                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
+                                                    </form>
+                                                    <p><p>
+                                                        <h4 class="price"><b>@Model.Dessert.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
                         </ul>
                     </div>
                 </div>
@@ -122,9 +245,38 @@
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <ul class="list-group">
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Pepsi <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Water <span class="pull-right"><b>Price</b></span></li>
-                            <li class="list-group-item" data-toggle="modal" data-target="#orderDetails">Orange Juice <span class="pull-right"><b>Price</b></span></li>
+                            @for (int i = 0; i < Model.Drink.Count(); i++)
+                            {
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Drink.ElementAt(i).FoodID">@Model.Appetizer.ElementAt(i).Name <span class="pull-right"><b>$@Model.Drink.ElementAt(i).Price</b></span></li>
+
+                                <!-- modal for specifying how may food items customer wants to order -->
+                                <div id="@Model.Drink.ElementAt(i).FoodID" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-custom">
+                                        <!-- food item content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-sm">
+                                                <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title title-custom">@Model.Drink.ElementAt(i).Name</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
+                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                                                        <div class="form-group">
+                                                            <input type='text' name='quantity' value='0' class='qty form-control' />
+                                                        </div>
+                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
+                                                    </form>
+                                                    <p><p>
+                                                        <h4 class="price"><b>@Model.Drink.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
                         </ul>
                     </div>
                 </div>
@@ -149,10 +301,12 @@
                         <td>$20</td> <!-- also add a button to cancel & delete the order -->
                         <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" class="text-center">&times;</span></button></td>
                     </tr>
+                    <tr>
+                    </tr>
                 </table>
 
                 <div class="panel-footer" style="height: 75px;">
-                    <h4 class="price"><b>Total Price</b>&emsp;<input class="btn btn-default btn-custom" type="submit" value="Submit"></input></h4>
+                    <h4 class="price"><b>Total Price</b>&emsp;<input class="btn btn-default btn-custom" type="submit" value="Submit" data-toggle="modal" data-target="#customerDetails"></input></h4>
                 </div>
             </div>
         </div>
@@ -178,6 +332,33 @@
                         </form>
                         <p><p>
                             <h4 class="price"><b>Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for customer to enter their details -->
+    <div id="customerDetails" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-custom">
+            <div class="modal-content">
+                <div class="modal-header modal-sm">
+                    <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title title-custom">Please Enter Your Details:</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control input-block-level" id="inputName" placeholder="Name" />
+                        </div>
+                        <div class="form-group input-block-level">
+                            <label for="inputTel">Phone No.</label>
+                            <input type="tel" class="form-control input-block-level" id="inputTel" placeholder="Phone No." />
+                        </div>
+                        <p><p>
+                            <a class="btn btn-default btn-custom pull-right" href="#" role="button">Submit</a></h4>
                         </p>
                     </div>
                 </div>

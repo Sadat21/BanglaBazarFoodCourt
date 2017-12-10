@@ -40,7 +40,22 @@ namespace BanglaBazarFoodCourt.Controllers
 
         public ActionResult Order()
         {
-            return View();
+            var entree = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Entree' ");
+            var appetizer = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Appetizers' ");
+            var dessert = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Dessert' ");
+            var drink = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Drink' ");
+            var promos = _context.PromoTable.ToList();
+
+            OrderViewModel forOrder = new OrderViewModel
+            {
+                Dessert = dessert,
+                Entree = entree,
+                Appetizer = appetizer,
+                Drink = drink,
+                Promo = promos
+            };
+
+            return View(forOrder);
         }
 
         public ActionResult Menus()
