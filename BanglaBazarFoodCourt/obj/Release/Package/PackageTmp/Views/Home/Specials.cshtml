@@ -72,7 +72,12 @@
                                 <h3 class="hdr-custom">@Model.ElementAt(i).Name</h3>
                                 <p><i>@Model.ElementAt(i).Description</i></p>
                                 <p>
-                                    <h4 class="price"><b>@Model.ElementAt(i).Discount&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                    @using (Html.BeginForm("Order", "Home"))
+                                    {
+                                        <b>$@Model.ElementAt(i).Discount&emsp;</b>
+                                        Session["order_start"] = Model.ElementAt(i);
+                                        <button type="submit" class="btn btn-default btn-custom">Order</button>
+                                    }
                                 </p>
                             </div>
                         </div>

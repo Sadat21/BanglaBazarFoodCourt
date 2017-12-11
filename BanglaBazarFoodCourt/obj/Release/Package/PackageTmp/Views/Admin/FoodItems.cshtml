@@ -51,16 +51,19 @@
         </td>
         <td>
             @{
-                var base64 = Convert.ToBase64String(item.Picture);
-                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                if (item.Picture != null)
+                {
+                    var base64 = Convert.ToBase64String(item.Picture);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img src="@imgSrc" width="200" height="200" />
+                }
             }
 
-            <img src="@imgSrc" width="200" height="200"/>
+            
                         
         </td>
         <td>
             @Html.ActionLink("Edit", "EditFoodItem", new { id=item.FoodID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FoodID }) |
             @Html.ActionLink("Delete", "DeleteFoodItem", new { id=item.FoodID })
         </td>
     </tr>

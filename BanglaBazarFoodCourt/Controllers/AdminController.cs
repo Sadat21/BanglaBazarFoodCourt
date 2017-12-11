@@ -38,7 +38,7 @@ namespace BanglaBazarFoodCourt.Controllers
          * */
         public ActionResult FoodItems()
         {
-            var entitites = _context.Food_ItemTable.ToList();
+            var entitites = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item");
             return View(entitites);
         }
 
@@ -58,7 +58,10 @@ namespace BanglaBazarFoodCourt.Controllers
                     foodItem.Picture = ms.ToArray();
                 }
 
-                _context.Food_ItemTable.Add(foodItem);
+                _context.Database.ExecuteSqlCommand("INSERT INTO Food_Item (Name, Availability, Type, Description, Price, Picture) VALUES ({0}, {1}, {2}, {3}, {4}, {5})", 
+                    new object[] {foodItem.Name, foodItem.Availability, foodItem.Type, foodItem.Description, foodItem.Price, foodItem.Picture });
+
+
                 _context.SaveChanges();
             }
             catch
@@ -74,7 +77,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food_Item temp = _context.Food_ItemTable.Find(id);
+            var x= _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE FoodID = {0}", id);
+            Food_Item temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -88,7 +92,9 @@ namespace BanglaBazarFoodCourt.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Entry(temp).State = EntityState.Modified;
+                _context.Database.ExecuteSqlCommand("UPDATE Food_Item SET Name = {0}, Availability = {1}, Type = {2}, Description = {3}, Price = {4} WHERE FoodID = {5}",
+                    new object[] { temp.Name, temp.Availability, temp.Type, temp.Description, temp.Price, temp.FoodID});
+                //_context.Entry(temp).State = EntityState.Modified;
                 _context.SaveChanges();
                 return RedirectToAction("FoodItems");
             }
@@ -101,7 +107,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food_Item temp = _context.Food_ItemTable.Find(id);
+            var x = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE FoodID = {0}", id);
+            Food_Item temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -113,8 +120,7 @@ namespace BanglaBazarFoodCourt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteFoodItemConfirmed(int id)
         {
-            Food_Item temp = _context.Food_ItemTable.Find(id);
-            _context.Food_ItemTable.Remove(temp);
+            _context.Database.ExecuteSqlCommand("DELETE FROM Food_Item WHERE FoodID = {0}", id);
             _context.SaveChanges();
             return RedirectToAction("FoodItems");
         }
@@ -137,19 +143,83 @@ namespace BanglaBazarFoodCourt.Controllers
             return View(entitites);
         }
 
+        public ActionResult CreateEmployee()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SaveEmployee(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                //_context.Employees.Add(employee);
+                _context.Database.ExecuteSqlCommand("INSERT INTO Employees (Name, Wage) VALUES ({0}, {1})",
+                    new object[] { employee.Name, employee.Wage });
+                _context.SaveChanges();
+
+            }
+
+
+            return RedirectToAction("Employees");
+        }
+
         public ActionResult EditEmployee(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee temp = _context.Employees.Find(id);
+            var x = _context.Employees.SqlQuery("SELECT * FROM Employees WHERE SIN = {0}", id);
+            Employee temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
             }
             return View(temp);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditEmployee(Employee temp)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                _context.Entry(temp).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Employees");
+            }
+            return View(temp);
+        }
+
+        public ActionResult DeleteEmployee(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var x = _context.Employees.SqlQuery("SELECT * FROM Employees WHERE SIN = {0}", id);
+            Employee temp = x.First();
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
+
+        [HttpPost, ActionName("DeleteEmployee")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteEmployeeConfirmed(int id)
+        {
+            _context.Database.ExecuteSqlCommand("DELETE FROM Employees WHERE SIN = {0}", id);
+            _context.SaveChanges();
+            return RedirectToAction("Employees");
+        }
+
+        
+
+
 
         /**
          * Supervisors
@@ -183,18 +253,78 @@ namespace BanglaBazarFoodCourt.Controllers
             return View(entitites);
         }
 
+        public ActionResult CreateCustomer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SaveCustomer(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+
+                _context.Database.ExecuteSqlCommand("INSERT INTO Customers (name, contactNo) VALUES ({0}, {1})",
+                    new object[] { customer.name, customer.contactNo });
+                _context.SaveChanges();
+
+            }
+
+
+            return RedirectToAction("Customers");
+        }
+
         public ActionResult EditCustomer(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = _context.CustomerTable.Find(id);
-            if (customer == null)
+            var x = _context.CustomerTable.SqlQuery("SELECT * FROM Customers WHERE id = {0}", id);
+            Customer temp = x.First();
+            if (temp == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(temp);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditCustomer(Customer temp)
+        {
+            if (ModelState.IsValid)
+            {
+
+                _context.Entry(temp).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Customers");
+            }
+            return View(temp);
+        }
+
+        public ActionResult DeleteCustomer(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var x = _context.CustomerTable.SqlQuery("SELECT * FROM Customers WHERE id = {0}", id);
+            Customer temp = x.First();
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
+
+        [HttpPost, ActionName("DeleteCustomer")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCustomerConfirmed(int id)
+        {
+            _context.Database.ExecuteSqlCommand("DELETE FROM Customers WHERE id = {0}", id);
+            _context.SaveChanges();
+            return RedirectToAction("Customers");
         }
 
         /**
@@ -203,7 +333,7 @@ namespace BanglaBazarFoodCourt.Controllers
          * */
         public ActionResult Promotions()
         {
-            var entitites = _context.PromoTable.ToList();
+            var entitites = _context.PromoTable.SqlQuery("SELECT * FROM Promoes");
             return View(entitites);
         }
 
@@ -217,7 +347,8 @@ namespace BanglaBazarFoodCourt.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.PromoTable.Add(promo);
+                _context.Database.ExecuteSqlCommand("INSERT INTO Promoes (StartDate, EndDate, Discount, Name, Description) VALUES ({0}, {1}, {2}, {3}, {4})",
+                     new object[] { promo.StartDate, promo.EndDate, promo.Discount, promo.Name, promo.Description });
                 _context.SaveChanges();
                 
             }
@@ -234,7 +365,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Promo temp = _context.PromoTable.Find(id);
+            var x = _context.PromoTable.SqlQuery("SELECT * FROM Promoes WHERE PromoID = {0}", id);
+            Promo temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -262,7 +394,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Promo temp = _context.PromoTable.Find(id);
+            var x = _context.PromoTable.SqlQuery("SELECT * FROM Promoes WHERE PromoID = {0}", id);
+            Promo temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -274,8 +407,7 @@ namespace BanglaBazarFoodCourt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePromoConfirmed(int id)
         {
-            Promo temp = _context.PromoTable.Find(id);
-            _context.PromoTable.Remove(temp);
+            _context.Database.ExecuteSqlCommand("DELETE FROM Promoes WHERE PromoID = {0}", id);
             _context.SaveChanges();
             return RedirectToAction("Promotions");
         }
@@ -285,7 +417,7 @@ namespace BanglaBazarFoodCourt.Controllers
          * */
         public ActionResult Orders()
         {
-            var entitites = _context.OrderTable.ToList();
+            var entitites = _context.OrderTable.SqlQuery("SELECT * FROM Orders");
             return View(entitites);
         }
 
@@ -298,8 +430,18 @@ namespace BanglaBazarFoodCourt.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.OrderTable.Add(order);
-                _context.SaveChanges();
+                if(order.Customer == null)
+                {
+                    _context.OrderTable.Add(order);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    _context.Database.ExecuteSqlCommand("INSERT INTO Orders (totalPrice, orderTime, pickupTime, date, Customer_id) VALUES ({0}, {1}, {2}, {3}, {4})",
+                    new object[] { order.totalPrice, order.orderTime, order.pickupTime, order.date, order.Customer.id });
+                    _context.SaveChanges();
+                }
+                
             }
             return RedirectToAction("Orders");
         }
@@ -310,7 +452,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order temp = _context.OrderTable.Find(id);
+            var x = _context.OrderTable.SqlQuery("SELECT * FROM Orders WHERE orderNo = {0}", id);
+            Order temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -337,7 +480,8 @@ namespace BanglaBazarFoodCourt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order temp = _context.OrderTable.Find(id);
+            var x = _context.OrderTable.SqlQuery("SELECT * FROM Orders WHERE orderNo = {0}", id);
+            Order temp = x.First();
             if (temp == null)
             {
                 return HttpNotFound();
@@ -349,8 +493,7 @@ namespace BanglaBazarFoodCourt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteOrderConfirmed(int id)
         {
-            Order temp = _context.OrderTable.Find(id);
-            _context.OrderTable.Remove(temp);
+            _context.Database.ExecuteSqlCommand("DELETE FROM Orders WHERE orderNo = {0}", id);
             _context.SaveChanges();
             return RedirectToAction("Orders");
         }
@@ -463,11 +606,11 @@ namespace BanglaBazarFoodCourt.Controllers
             }
             else
             {
-                ViewBag.entities = _context.Contains_Table.SqlQuery("SELECT * FROM Contains WHERE OrderNo = {0}", id);
-                
-                return View();
+
+                var entities = _context.Contains_Table.SqlQuery("SELECT * FROM [Contains] WHERE OrderNo = {0}", new object[] { id });
+                return View(entities.ToList());
             }
-            
+
         }
 
         public ActionResult CreateContains(int? id)
@@ -491,12 +634,31 @@ namespace BanglaBazarFoodCourt.Controllers
             return RedirectToAction("Orders");
         }
 
+        public ActionResult DeleteContains(int? OrderNo, int? FoodID)
+        {
+            if (FoodID == null || OrderNo == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
+            var x = _context.Contains_Table.SqlQuery("SELECT * FROM [Contains] WHERE FoodID = {0} AND OrderNo = {1}", new object[] { FoodID, OrderNo });
+            Contains temp = x.First();
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
 
+        [HttpPost, ActionName("DeleteContains")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteContainConfirmed(int? FoodID, int? OrderNo)
+        {
 
-
-
-
+            _context.Database.ExecuteSqlCommand("DELETE FROM [Contains] WHERE FoodID = {0} AND OrderNo = {1}", new object[] { FoodID, OrderNo });
+            _context.SaveChanges();
+            return RedirectToAction("Orders");
+        }
 
 
     }

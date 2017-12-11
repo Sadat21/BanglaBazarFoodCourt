@@ -7,12 +7,12 @@
 <h2>Employees</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreateEmployee")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SIN)
+            ID
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -36,8 +36,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditEmployee", new { id=item.SIN }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SIN }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SIN })
+            @Html.ActionLink("Delete", "DeleteEmployee", new { id=item.SIN })
         </td>
     </tr>
 }

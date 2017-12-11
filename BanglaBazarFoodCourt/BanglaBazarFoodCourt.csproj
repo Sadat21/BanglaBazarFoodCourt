@@ -345,6 +345,11 @@
     <Content Include="Views\Admin\DeletePromotion.cshtml" />
     <Content Include="Views\Admin\DeleteOrder.cshtml" />
     <Content Include="Views\Admin\DeleteDiscount.cshtml" />
+    <Content Include="Views\Admin\CreateEmployee.cshtml" />
+    <Content Include="Views\Admin\DeleteEmployee.cshtml" />
+    <Content Include="Views\Admin\CreateCustomer.cshtml" />
+    <Content Include="Views\Admin\DeleteCustomer.cshtml" />
+    <Content Include="Views\Admin\DeleteContains.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

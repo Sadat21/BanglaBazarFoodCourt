@@ -82,3 +82,4 @@ C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Release\BanglaBazarFoodCourt.csproj.GenerateResource.Cache
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Release\BanglaBazarFoodCourt.dll
 C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Release\BanglaBazarFoodCourt.pdb
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Release\BanglaBazarFoodCourt.Migrations.MAdepicturearequiredattributeforFood_Item.resources
