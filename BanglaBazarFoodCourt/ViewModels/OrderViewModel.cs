@@ -13,5 +13,7 @@ namespace BanglaBazarFoodCourt.ViewModels
         public IEnumerable<Food_Item> Dessert { get; set; }
         public IEnumerable<Food_Item> Drink { get; set; }
         public IEnumerable<Promo> Promo { get; set; }
+        public int OrderQty { get; set; }
+        public double OrderPrice { get; set; }
     }
 }
