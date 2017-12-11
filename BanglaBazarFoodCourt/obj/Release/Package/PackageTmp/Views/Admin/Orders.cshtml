@@ -54,6 +54,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditOrder", new { id=item.orderNo }) |
+            @Html.ActionLink("Add Food Item", "CreateContains", new { id = item.orderNo }) |
             @Html.ActionLink("Delete", "DeleteOrder", new { id=item.orderNo })
         </td>
     </tr>

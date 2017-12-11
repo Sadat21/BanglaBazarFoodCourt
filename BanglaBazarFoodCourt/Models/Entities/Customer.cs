@@ -15,6 +15,8 @@ namespace BanglaBazarFoodCourt.Models
         public string name { get; set; }
 
         [DisplayName("Contact No.")]
+        [Phone]
+        [Required]
         public string contactNo { get; set; }
     }
 }

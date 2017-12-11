@@ -12,6 +12,7 @@ namespace BanglaBazarFoodCourt.Models.Entities
         [Key]
         public int PromoID { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         [DisplayName("Start Date")]
@@ -20,8 +21,11 @@ namespace BanglaBazarFoodCourt.Models.Entities
         [DisplayName("End Date")]
         public DateTime EndDate { get; set; }
 
+        [Range(0,200)]
+        [Required]
         public double Discount { get; set; }
 
+        [StringLength(160)]
         public string Description { get; set; }
 
 

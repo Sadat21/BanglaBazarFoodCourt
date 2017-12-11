@@ -26,7 +26,7 @@
                 $('input[id=\'quantity\']').val(qty);
             }
             var currentPrice = qty * price;
-            $('input[id=\'orderPrice\']').val(currentPrice.toFixed(2));
+            $('input[class=\'orderPrice\']').val(currentPrice.toFixed(2));
             console.log(qty + " " + currentPrice);
         });
         // This button will decrement the value till 0
@@ -47,8 +47,18 @@
                 $('input[id=\'quantity\']').val(qty);
             }
             var currentPrice = qty * price;
-            $('input[id=\'orderPrice\']').val(currentPrice.toFixed(2));
+            $('input[class=\'orderPrice\']').val(currentPrice.toFixed(2));
             console.log(qty + " " + currentPrice);
+        });
+        $(".addToOrder").click(function (e) {
+            e.preventDefault();
+            // Get its current value
+            var qty = parseFloat($('input[id=\'quantity\']').val());
+            var price = parseFloat($('input[class=\'foodPrice\']').val());
+            var orderPrice = (qty * price).toFixed(2);
+            var name = $('input[class=\'foodName\']').val();
+            $("#orderTbl tr:last").after("<tr><td>" + name + "</td><td>" + qty + "</td><td>$" + orderPrice + "</td><td><button type=\"button\" class=\"close\" aria-label=\"Close\"><span aria-hidden=\"true\" class=\"text-center\">&times;</span></button></td></tr>");
+
         });
     });
 
@@ -88,14 +98,16 @@
                                                     <form class="form-inline text-center">
                                                         <input type="button" class="btn btn-default btn-custom minus" value="-" field="quantity" />
                                                         <div class="form-group">
-                                                            <input type='text' id='quantity' value='@Model.OrderQty' class='qty form-control' />
+                                                            <input type='text' value='@Model.OrderQty' id='quantity' class='form-control' />
                                                         </div>
                                                         <input type='button' class="btn btn-default btn-custom plus" value="+" field="quantity" />
                                                         <p>
                                                             <h6 class="price pull-right">
                                                                 <input value="@Model.Promo.ElementAt(i).Discount" class="foodPrice" name="price" type="hidden" />
-                                                                <b>$<input id="orderPrice" value="@Model.Promo.ElementAt(i).Discount" type="text" style="font-size: 14px; border: none; font-weight: bold; width:50px;" readonly/></b>
-                                                                <input type="submit" class="btn btn-default btn-custom" value="Add"/>
+                                                                <input value="@Model.Promo.ElementAt(i).Name" class="foodName" type="hidden" />
+                                                                <b>$<input class="orderPrice" value="@Model.Promo.ElementAt(i).Discount" type="text" style="font-size: 14px; border: none; font-weight: bold; width:50px;" readonly/></b>
+                                                                <input type="button" class="btn btn-default btn-custom addToOrder" value="Add" />
+
                                                             </h6>
                                                         </p>
                                                     </form> 
@@ -134,16 +146,20 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
-                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
+                                                    <form class="form-inline text-center">
+                                                        <input type="button" class="btn btn-default btn-custom minus" value="-" field="quantity" />
                                                         <div class="form-group">
-                                                            <input type='text' name='quantity' value='0' class='qty form-control' readonly/>
+                                                            <input type='text' id='quantity' value='@Model.OrderQty' class='qty form-control' />
                                                         </div>
-                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
-                                                    </form>
-                                                    <p><p>
-                                                        <h4 class="price"><b>@Model.Appetizer.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a></h4>
-                                                    </p>
+                                                        <input type='button' class="btn btn-default btn-custom plus" value="+" field="quantity" />
+                                                        <p>
+                                                            <h6 class="price pull-right">
+                                                                <input value="@Model.Appetizer.ElementAt(i).Price" class="foodPrice" name="price" type="hidden" />
+                                                                <b>$<input id="orderPrice" value="@Model.Appetizer.ElementAt(i).Price" type="text" style="font-size: 14px; border: none; font-weight: bold; width:50px;" readonly /></b>
+                                                                <input type="submit" class="btn btn-default btn-custom" value="Add" />
+                                                            </h6>
+                                                        </p>
+                                                    </form> 
                                                 </div>
                                             </div>
                                         </div>
@@ -256,7 +272,7 @@
                         <ul class="list-group">
                             @for (int i = 0; i < Model.Drink.Count(); i++)
                             {
-                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Drink.ElementAt(i).FoodID">@Model.Appetizer.ElementAt(i).Name <span class="pull-right"><b>$@Model.Drink.ElementAt(i).Price</b></span></li>
+                                <li class="list-group-item" data-toggle="modal" data-target="#@Model.Drink.ElementAt(i).FoodID">@Model.Drink.ElementAt(i).Name <span class="pull-right"><b>$@Model.Drink.ElementAt(i).Price</b></span></li>
 
                                 <!-- modal for specifying how may food items customer wants to order -->
                                 <div id="@Model.Drink.ElementAt(i).FoodID" class="modal fade" role="dialog">
@@ -297,7 +313,7 @@
                 <div class="panel-heading tab-custom">Your Order</div>
 
                 <!-- Table -->
-                <table class="table table-striped tbl-custom">
+                <table id="orderTbl" class="table table-striped tbl-custom">
                     <tr> <!-- table headers -->
                         <td><b>Name</b></td>
                         <td><b>Quantity</b></td>
@@ -309,8 +325,6 @@
                         <td>- 12 +</td> <!-- TODO: add buttons to inc/dec the quantity ordered -->
                         <td>$20</td> <!-- also add a button to cancel & delete the order -->
                         <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" class="text-center">&times;</span></button></td>
-                    </tr>
-                    <tr>
                     </tr>
                 </table>
 
@@ -358,14 +372,18 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <div class="form-group">
-                            <label for="inputName">Name</label>
-                            <input type="text" class="form-control input-block-level" id="inputName" placeholder="Name" />
-                        </div>
-                        <div class="form-group input-block-level">
-                            <label for="inputTel">Phone No.</label>
-                            <input type="tel" class="form-control input-block-level" id="inputTel" placeholder="Phone No." />
-                        </div>
+                        @using (Html.BeginForm("SaveOrder", "Admin", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control input-block-level" id="inputName" placeholder="Name" />
+                            </div>
+                            <div class="form-group input-block-level">
+                                <label for="inputTel">Phone No.</label>
+                                <input type="tel" class="form-control input-block-level" id="inputTel" placeholder="Phone No." />
+                            </div>
+
+                        }
                         <p><p>
                             <a class="btn btn-default btn-custom pull-right" href="#" role="button">Submit</a></h4>
                         </p>

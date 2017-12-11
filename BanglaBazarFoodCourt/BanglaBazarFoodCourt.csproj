@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201712110010218_MAde picture a required attribute for Food_Item.Designer.cs">
       <DependentUpon>201712110010218_MAde picture a required attribute for Food_Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712110749048_Added some validation to Promo.cs" />
+    <Compile Include="Migrations\201712110749048_Added some validation to Promo.Designer.cs">
+      <DependentUpon>201712110749048_Added some validation to Promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712110756446_Added validation for all tables.cs" />
+    <Compile Include="Migrations\201712110756446_Added validation for all tables.Designer.cs">
+      <DependentUpon>201712110756446_Added validation for all tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities\Contains.cs" />
@@ -267,7 +275,9 @@
     <None Include="Properties\PublishProfiles\BanglaBazaarFoodCourt - Web Deploy.pubxml" />
     <None Include="Resources\BreeSerif-Regular.ttf" />
     <None Include="Resources\logo.png" />
-    <None Include="Resources\logo_transparent.png" />
+    <None Include="Resources\logo_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -404,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712110010218_MAde picture a required attribute for Food_Item.resx">
       <DependentUpon>201712110010218_MAde picture a required attribute for Food_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712110749048_Added some validation to Promo.resx">
+      <DependentUpon>201712110749048_Added some validation to Promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712110756446_Added validation for all tables.resx">
+      <DependentUpon>201712110756446_Added validation for all tables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

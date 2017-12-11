@@ -17,7 +17,7 @@ namespace BanglaBazarFoodCourt.Controllers
      *
      * */
 
-    //[Authorize]
+    [Authorize]
     public class AdminController : Controller
     {
         private ApplicationDbContext _context;

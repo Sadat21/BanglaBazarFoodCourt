@@ -21,6 +21,8 @@ namespace BanglaBazarFoodCourt.Models.Entities
         public int FoodID { get; set; }
         public virtual Food_Item Food_Item { get; set; }
 
+        [Range(0,200)]
+        [Required]
         public int Quantity { get; set; }
     }
 }

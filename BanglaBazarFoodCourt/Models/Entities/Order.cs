@@ -15,15 +15,19 @@ namespace BanglaBazarFoodCourt.Models
         public Customer Customer { get; set; }
 
         [DisplayName("Total Price")]
+        [Range(0,100)]
         public double totalPrice { get; set; }
 
         [DisplayName("Order Time")]
+        [StringLength(5)]
         public string orderTime { get; set; }
 
         [DisplayName("Pickup Time")]
+        [StringLength(5)]
         public string pickupTime { get; set; }
 
         [DisplayName("Date")]
+        [Required]
         public DateTime date { get; set; }
     }
 }

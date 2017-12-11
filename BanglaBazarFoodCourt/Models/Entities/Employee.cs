@@ -12,8 +12,10 @@ namespace BanglaBazarFoodCourt.Models.Entities
         [Key]
         public int SIN { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Range(0,200)]
         public double Wage { get; set; }
     }
 }
