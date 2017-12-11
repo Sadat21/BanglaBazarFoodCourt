@@ -60,7 +60,7 @@ namespace BanglaBazarFoodCourt.Controllers
             return View(forOrder);
         }
         
-        [HttpPost]
+       /** [HttpPost]
         public ActionResult UpdateOrderItem(OrderViewModel order, float orderPrice)
         {
             int temp = ++order.OrderQty;
@@ -69,6 +69,14 @@ namespace BanglaBazarFoodCourt.Controllers
             order.OrderQty = temp;
             return View(order);
         }
+
+        public ActionResult AddOrderItem(OrderViewModel model, int id)
+        {
+            Food_Item temp = _context.Food_ItemTable.Find(id);
+            model.OrderPrice = model.OrderQty * temp.Price;
+            return View(model.OrderPrice);
+        }*/
+        
         
         public ActionResult Menus()
         {
