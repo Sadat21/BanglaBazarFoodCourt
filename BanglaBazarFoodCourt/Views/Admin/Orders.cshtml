@@ -7,12 +7,15 @@
 <h2>Orders</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreateOrder")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Customer.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderNo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.totalPrice)
@@ -35,6 +38,9 @@
             @Html.DisplayFor(modelItem => item.Customer.name)
         </td>
         <td>
+            @Html.ActionLink(item.orderNo.ToString(), "Contains", new { id = item.orderNo })
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.totalPrice)
         </td>
         <td>
@@ -48,8 +54,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditOrder", new { id=item.orderNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.orderNo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.orderNo })
+            @Html.ActionLink("Delete", "DeleteOrder", new { id=item.orderNo })
         </td>
     </tr>
 }

@@ -250,3 +250,4 @@ C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\Bangla
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.csproj.CoreCompileInputs.cache
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.dll
 C:\Users\maria\OneDrive - University of Calgary\CPSC 471\Projects\Project\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.pdb
+C:\Users\Sadat Msi\OneDrive\University\Sadat_Documents\Third Year\Fall 2017\CPSC 471\BanglaBazar\BanglaBazarFoodCourt\BanglaBazarFoodCourt\obj\Debug\BanglaBazarFoodCourt.Migrations.MAdepicturearequiredattributeforFood_Item.resources

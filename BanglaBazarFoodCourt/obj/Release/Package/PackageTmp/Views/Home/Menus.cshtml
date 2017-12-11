@@ -32,7 +32,7 @@
                         @for (int j = 0; j < 3 && i < Model.Appetizer.Count(); j++, i++)
                         {
                             <div class="thumbnail thumbnail-custom">
-                                <td>
+                                <td class="menus">
                                     @{
                                         var base64 = Convert.ToBase64String(Model.Appetizer.ElementAt(i).Picture);
                                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
@@ -63,7 +63,14 @@
                                                                 <div class="col-md-6 desc-custom">
                                                                     <i>@Model.Appetizer.ElementAt(i).Description</i>
                                                                     <p><p>
-                                                                        <h4 class="price"><b>$@Model.Appetizer.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                        <h4 class="price">
+                                                                            @using (Html.BeginForm("Order", "Home"))
+                                                                            {
+                                                                                <b>$@Model.Appetizer.ElementAt(i).Price&emsp;</b>
+                                                                                Session["order_start"] = Model.Appetizer.ElementAt(i);
+                                                                                <button type="submit" class="btn btn-default btn-custom">Order</button>
+                                                                            }
+                                                                        </h4>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -93,7 +100,7 @@
                         {
 
                             <div class="thumbnail thumbnail-custom">
-                                <td>
+                                <td class="menus">
                                     @{
                                         var base64 = Convert.ToBase64String(Model.Entree.ElementAt(i).Picture);
                                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
@@ -125,7 +132,14 @@
                                                                 <div class="col-md-6 desc-custom">
                                                                     <i>@Model.Entree.ElementAt(i).Description</i>
                                                                     <p><p>
-                                                                        <h4 class="price"><b>$@Model.Entree.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                        <h4 class="price">
+                                                                            <b>$@Model.Entree.ElementAt(i).Price&emsp;</b>
+                                                                            @using (Html.BeginForm())
+                                                                            {
+                                                                                <a class="btn btn-default btn-custom" href="#" role="button">Order</a>
+
+                                                                            }
+                                                                        </h4>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -154,7 +168,7 @@
                         @for (int j = 0; j < 3 && i < Model.Dessert.Count(); j++, i++)
                         {
                             <div class="thumbnail thumbnail-custom">
-                                <td>
+                                <td class="menus">
                                     @{
                                         var base64 = Convert.ToBase64String(Model.Dessert.ElementAt(i).Picture);
                                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
@@ -213,7 +227,7 @@
                         @for (int j = 0; j < 3 && i < Model.Drink.Count(); j++, i++)
                         {
                             <div class="thumbnail thumbnail-custom">
-                                <td>
+                                <td class="menus">
                                     @{
                                         var base64 = Convert.ToBase64String(Model.Drink.ElementAt(i).Picture);
                                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
@@ -259,11 +273,3 @@
                                     }
             }
         </table>
-
-
-
-
-
-
-
-    </div>
