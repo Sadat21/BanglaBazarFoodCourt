@@ -12,7 +12,7 @@ namespace BanglaBazarFoodCourt.Models
     {
         [Key]
         public int orderNo { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
 
         [DisplayName("Total Price")]
         [Range(0,100)]

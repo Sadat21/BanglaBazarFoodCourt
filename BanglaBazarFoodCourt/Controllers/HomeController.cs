@@ -46,6 +46,7 @@ namespace BanglaBazarFoodCourt.Controllers
             var dessert = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Dessert' ");
             var drink = _context.Food_ItemTable.SqlQuery("SELECT * FROM Food_Item WHERE Type = 'Drink' ");
             var promos = _context.PromoTable.ToList();
+            var contain = _context.Contains_Table.ToList();
 
             OrderViewModel forOrder = new OrderViewModel
             {
@@ -54,11 +55,15 @@ namespace BanglaBazarFoodCourt.Controllers
                 Appetizer = appetizer,
                 Drink = drink,
                 Promo = promos,
+                Contain = contain,
+                Customers = new Customer(),
+                Orders = new Order(),
                 OrderQty = 1,
             };
 
             return View(forOrder);
         }
+
         
        /** [HttpPost]
         public ActionResult UpdateOrderItem(OrderViewModel order, float orderPrice)
