@@ -21,6 +21,7 @@ namespace BanglaBazarFoodCourt.Models.Entities
 
         public double Price { get; set; }
 
+        [Required]
         public byte [] Picture { get; set; }
     }
 }

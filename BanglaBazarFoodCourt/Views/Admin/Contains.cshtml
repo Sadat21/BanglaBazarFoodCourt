@@ -1,0 +1,45 @@
+﻿@model BanglaBazarFoodCourt.Models.Entities.Contains
+
+@{
+    ViewBag.Title = "Contains";
+}
+
+<h2>Contains</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateContains")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Food_Item.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.orderTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.entities) {
+    <tr>
+        <td>
+            @item.Food_Item.Name
+        </td>
+        <td>
+            @item.Order.orderTime
+        </td>
+        <td>
+            @item.Quantity
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -6,9 +6,8 @@
 
 <h2>Discount</h2>
 
-<p>
-    @Html.ActionLink("Add More Food Items", "CreateDiscount")
-</p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -29,9 +28,7 @@
             @Html.DisplayFor(modelItem => item.Promo.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Delete", "DeleteDiscount", new {  FoodID=item.FoodID, PromoID = item.PromoID  })
         </td>
     </tr>
 }

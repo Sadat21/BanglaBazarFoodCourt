@@ -42,8 +42,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditPromotion", new { id=item.PromoID }) |
-            @Html.ActionLink("Change Food", "Details", new { id=item.PromoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PromoID })
+            @Html.ActionLink("Add Food", "CreateDiscount", new { id=item.PromoID }) |
+            @Html.ActionLink("Delete", "DeletePromotion", new { id=item.PromoID })
         </td>
     </tr>
 }

@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201712090329465_Added Description to Promo.Designer.cs">
       <DependentUpon>201712090329465_Added Description to Promo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712110010218_MAde picture a required attribute for Food_Item.cs" />
+    <Compile Include="Migrations\201712110010218_MAde picture a required attribute for Food_Item.Designer.cs">
+      <DependentUpon>201712110010218_MAde picture a required attribute for Food_Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities\Contains.cs" />
@@ -335,6 +339,12 @@
     <Content Include="Views\Admin\Discount.cshtml" />
     <Content Include="Views\Admin\CreatePromotion.cshtml" />
     <Content Include="Views\Admin\CreateDiscount.cshtml" />
+    <Content Include="Views\Admin\CreateOrder.cshtml" />
+    <Content Include="Views\Admin\Contains.cshtml" />
+    <Content Include="Views\Admin\CreateContains.cshtml" />
+    <Content Include="Views\Admin\DeletePromotion.cshtml" />
+    <Content Include="Views\Admin\DeleteOrder.cshtml" />
+    <Content Include="Views\Admin\DeleteDiscount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712090329465_Added Description to Promo.resx">
       <DependentUpon>201712090329465_Added Description to Promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712110010218_MAde picture a required attribute for Food_Item.resx">
+      <DependentUpon>201712110010218_MAde picture a required attribute for Food_Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

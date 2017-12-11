@@ -50,15 +50,21 @@ namespace BanglaBazarFoodCourt.Controllers
         [HttpPost]
         public ActionResult SaveFoodItem(Food_Item foodItem, HttpPostedFileBase ImageFile)
         {
-            
-            using (var ms = new MemoryStream())
+            try
             {
-                ImageFile.InputStream.CopyTo(ms);
-                foodItem.Picture = ms.ToArray();
-            }
+                using (var ms = new MemoryStream())
+                {
+                    ImageFile.InputStream.CopyTo(ms);
+                    foodItem.Picture = ms.ToArray();
+                }
 
-            _context.Food_ItemTable.Add(foodItem);
-            _context.SaveChanges();
+                _context.Food_ItemTable.Add(foodItem);
+                _context.SaveChanges();
+            }
+            catch
+            {
+
+            }
             return RedirectToAction("FoodItems");
         }
 
@@ -193,7 +199,7 @@ namespace BanglaBazarFoodCourt.Controllers
 
         /**
          * Promotions
-         * //TODO: UPDATE ALL VIEWS SINCE I ADDED NAME
+         * 
          * */
         public ActionResult Promotions()
         {
@@ -206,7 +212,21 @@ namespace BanglaBazarFoodCourt.Controllers
             return View();
         }
 
-        
+        [HttpPost]
+        public ActionResult SavePromo(Promo promo)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.PromoTable.Add(promo);
+                _context.SaveChanges();
+                
+            }
+
+
+            return RedirectToAction("Promotions");
+        }
+
+
 
         public ActionResult EditPromotion(int? id)
         {
@@ -222,6 +242,44 @@ namespace BanglaBazarFoodCourt.Controllers
             return View(temp);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPromotion(Promo promo)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(promo).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Promotions");
+            }
+            return View(promo);
+            
+        }
+
+        public ActionResult DeletePromotion(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Promo temp = _context.PromoTable.Find(id);
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
+
+        [HttpPost, ActionName("DeletePromotion")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePromoConfirmed(int id)
+        {
+            Promo temp = _context.PromoTable.Find(id);
+            _context.PromoTable.Remove(temp);
+            _context.SaveChanges();
+            return RedirectToAction("Promotions");
+        }
+
         /**
          * Orders
          * */
@@ -229,6 +287,21 @@ namespace BanglaBazarFoodCourt.Controllers
         {
             var entitites = _context.OrderTable.ToList();
             return View(entitites);
+        }
+
+        public ActionResult CreateOrder()
+        {
+            return View();
+        }
+
+        public ActionResult SaveOrder(Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.OrderTable.Add(order);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Orders");
         }
 
         public ActionResult EditOrder(int? id)
@@ -244,6 +317,45 @@ namespace BanglaBazarFoodCourt.Controllers
             }
             return View(temp);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditOrder(Order temp)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(temp).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Orders");
+            }
+            return View(temp);
+        }
+
+        public ActionResult DeleteOrder(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Order temp = _context.OrderTable.Find(id);
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
+
+        [HttpPost, ActionName("DeleteOrder")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteOrderConfirmed(int id)
+        {
+            Order temp = _context.OrderTable.Find(id);
+            _context.OrderTable.Remove(temp);
+            _context.SaveChanges();
+            return RedirectToAction("Orders");
+        }
+
+
 
         /**
          * Phone Orders
@@ -290,11 +402,98 @@ namespace BanglaBazarFoodCourt.Controllers
 
         public ActionResult CreateDiscount(int? id)
         {
-            
+            ViewBag.PromoID = _context.PromoTable.SqlQuery("SELECT * FROM Promoes WHERE PromoID = {0}", id);
+
+            ViewBag.FoodID = _context.Food_ItemTable.ToList();
             return View();
         }
 
-       
+        public ActionResult SaveDiscount(Discounts discount)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.DiscountTable.Add(discount);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Promotions");
+        }
+
+        public ActionResult DeleteDiscount(int? FoodID, int? PromoID)
+        {
+            if (FoodID == null || PromoID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var x = _context.DiscountTable.SqlQuery("SELECT * FROM Discounts WHERE FoodID = {0} AND PromoID = {1}", new object[] { FoodID, PromoID});
+            Discounts temp = x.First();
+            if (temp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(temp);
+        }
+
+        [HttpPost, ActionName("DeleteDiscount")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteDiscountConfirmed(int? FoodID, int? PromoID)
+        {
+            var x = _context.DiscountTable.SqlQuery("SELECT * FROM Discounts WHERE FoodID = {0} AND PromoID = {1}", new object[] { FoodID, PromoID });
+            Discounts temp = x.First();
+            _context.DiscountTable.Remove(temp);
+            _context.SaveChanges();
+            return RedirectToAction("Discount");
+        }
+
+
+
+
+        /*
+         * Contains Tables
+         * 
+         * */
+        public ActionResult Contains(int? id)
+        {
+
+            if (id == null)
+            {
+                var entitites = _context.Contains_Table.ToList();
+                return View(entitites);
+            }
+            else
+            {
+                ViewBag.entities = _context.Contains_Table.SqlQuery("SELECT * FROM Contains WHERE OrderNo = {0}", id);
+                
+                return View();
+            }
+            
+        }
+
+        public ActionResult CreateContains(int? id)
+        {
+            ViewBag.OrderNo = _context.OrderTable.SqlQuery("SELECT * FROM Orders WHERE orderNo = {0}", id);
+
+            ViewBag.Food = _context.Food_ItemTable.ToList();
+
+            return View();
+            
+        }
+
+        public ActionResult SaveContains(Contains contains)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Contains_Table.Add(contains);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Orders");
+        }
+
+
+
+
 
 
 
