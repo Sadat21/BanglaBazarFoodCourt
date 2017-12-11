@@ -17,7 +17,7 @@ namespace BanglaBazarFoodCourt.Controllers
      *
      * */
 
-    [Authorize]
+//    [Authorize]
     public class AdminController : Controller
     {
         private ApplicationDbContext _context;
@@ -261,14 +261,15 @@ namespace BanglaBazarFoodCourt.Controllers
         [HttpPost]
         public ActionResult SaveCustomer(Customer customer)
         {
-            if (ModelState.IsValid)
-            {
+            System.Diagnostics.Debug.WriteLine("uuhh test: " + customer.name + " " + customer.contactNo + " " + ModelState.IsValid);
+ //           if (ModelState.IsValid)
+ //           {
 
                 _context.Database.ExecuteSqlCommand("INSERT INTO Customers (name, contactNo) VALUES ({0}, {1})",
                     new object[] { customer.name, customer.contactNo });
                 _context.SaveChanges();
 
-            }
+ //           }
 
 
             return RedirectToAction("Customers");
