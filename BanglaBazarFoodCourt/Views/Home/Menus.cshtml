@@ -134,10 +134,11 @@
                                                                     <p><p>
                                                                         <h4 class="price">
                                                                             <b>$@Model.Entree.ElementAt(i).Price&emsp;</b>
-                                                                            @using (Html.BeginForm())
+                                                                            @using (Html.BeginForm("Order", "Home"))
                                                                             {
-                                                                                <a class="btn btn-default btn-custom" href="#" role="button">Order</a>
-
+                                                                                <b>$@Model.Entree.ElementAt(i).Price&emsp;</b>
+                                                                                Session["order_start"] = Model.Entree.ElementAt(i);
+                                                                                <button type="submit" class="btn btn-default btn-custom">Order</button>
                                                                             }
                                                                         </h4>
                                                                     </p>
@@ -199,7 +200,12 @@
                                                             <div class="col-md-6 desc-custom">
                                                                 <i>@Model.Dessert.ElementAt(i).Description</i>
                                                                 <p><p>
-                                                                    <h4 class="price"><b>$@Model.Dessert.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                       @using (Html.BeginForm("Order", "Home"))
+                                                                       {
+                                                                           <b>$@Model.Dessert.ElementAt(i).Price&emsp;</b>
+                                                                           Session["order_start"] = Model.Dessert.ElementAt(i);
+                                                                           <button type="submit" class="btn btn-default btn-custom">Order</button>
+                                                                       }
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -258,7 +264,12 @@
                                                             <div class="col-md-6 desc-custom">
                                                                 <i>@Model.Drink.ElementAt(i).Description</i>
                                                                 <p><p>
-                                                                    <h4 class="price"><b>$@Model.Drink.ElementAt(i).Price&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Order</a></h4>
+                                                                       @using (Html.BeginForm("Order", "Home"))
+                                                                       {
+                                                                           <b>$@Model.Drink.ElementAt(i).Price&emsp;</b>
+                                                                           Session["order_start"] = Model.Drink.ElementAt(i);
+                                                                           <button type="submit" class="btn btn-default btn-custom">Order</button>
+                                                                       }
                                                                 </p>
                                                             </div>
                                                         </div>

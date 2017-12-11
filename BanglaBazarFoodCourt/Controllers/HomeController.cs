@@ -1,5 +1,6 @@
 ﻿using BanglaBazarFoodCourt.Models;
 using BanglaBazarFoodCourt.ViewModels;
+using BanglaBazarFoodCourt.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,12 +53,23 @@ namespace BanglaBazarFoodCourt.Controllers
                 Entree = entree,
                 Appetizer = appetizer,
                 Drink = drink,
-                Promo = promos
+                Promo = promos,
+                OrderQty = 1,
             };
 
             return View(forOrder);
         }
-
+        
+        [HttpPost]
+        public ActionResult UpdateOrderItem(OrderViewModel order, float orderPrice)
+        {
+            int temp = ++order.OrderQty;
+            order.OrderPrice = orderPrice;
+            ModelState.Remove("OrderQty");
+            order.OrderQty = temp;
+            return View(order);
+        }
+        
         public ActionResult Menus()
         {
 

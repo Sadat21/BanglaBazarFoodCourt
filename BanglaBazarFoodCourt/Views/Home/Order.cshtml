@@ -9,38 +9,46 @@
 <script>
     jQuery(document).ready(function () {
         // This button will increment the value
-        $('.qtyplus').click(function (e) {
+        $('.plus').click(function (e) {
             // Stop acting like a button
             e.preventDefault();
             // Get its current value
-            var currentVal = parseFloat($('input[name=\'quantity\']').val());
-            var currentPrice = parseFloat($('input[name=\'price\']').val());
+            var qty = parseFloat($('input[id=\'quantity\']').val());
+            var price = parseFloat($('input[class=\'foodPrice\']').val());
             // If is not undefined
-            if (!isNaN(currentVal)) {
+            if (!isNaN(qty)) {
                 // Increment
-                currentVal = $('input[name=\'quantity\']').val(currentVal + 1);
+                qty = qty + 1;
+                $('input[id=\'quantity\']').val(qty);
             } else {
                 // Otherwise put a 0 there
-                currentVal = $('input[name=\'quantity\']').val(0);
+                qty = 0;
+                $('input[id=\'quantity\']').val(qty);
             }
-            $('input[name=\'orderPrice\']').val(currentPrice * currentVal);
+            var currentPrice = qty * price;
+            $('input[id=\'orderPrice\']').val(currentPrice.toFixed(2));
+            console.log(qty + " " + currentPrice);
         });
         // This button will decrement the value till 0
-        $(".qtyminus").click(function (e) {
+        $(".minus").click(function (e) {
             // Stop acting like a button
             e.preventDefault();
             // Get its current value
-            var currentVal = parseFloat($('input[name=\'quantity\']').val());
-            var currentPrice = parseFloat($('input[name=\'price\']').val());
+            var qty = parseFloat($('input[id=\'quantity\']').val());
+            var price = parseFloat($('input[class=\'foodPrice\']').val());
             // If it isn't undefined or its greater than 0
-            if (!isNaN(currentVal) && currentVal > 0) {
+            if (!isNaN(qty) && qty > 0) {
                 // Decrement one
-                currentVal = $('input[name=\'quantity\']').val(currentVal - 1);
+                qty = qty - 1;
+                $('input[id=\'quantity\']').val(qty);
             } else {
                 // Otherwise put a 0 there
-                currentVal = $('input[name=\'quantity\']').val(0);
+                qty = 0;
+                $('input[id=\'quantity\']').val(qty);
             }
-            $('input[name=\'orderPrice\']').val(parseFloat(currentPrice * currentVal));
+            var currentPrice = qty * price;
+            $('input[id=\'orderPrice\']').val(currentPrice.toFixed(2));
+            console.log(qty + " " + currentPrice);
         });
     });
 
@@ -77,19 +85,20 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form id='myform' method='POST' action='#' class="text-center form-inline">
-                                                        <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' step="any" />
+                                                    <form class="form-inline text-center">
+                                                        <input type="button" class="btn btn-default btn-custom minus" value="-" field="quantity" />
                                                         <div class="form-group">
-                                                            <input type='text' name='quantity' value='1' class='qty form-control' />
+                                                            <input type='text' id='quantity' value='@Model.OrderQty' class='qty form-control' />
                                                         </div>
-                                                        <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' step="any" />
-                                                    </form>
-                                                    <p><p>
-                                                        <h4 class="price">
-                                                            <input value="@Model.Promo.ElementAt(i).Discount" name="price" type="hidden"/>
-                                                            <b><input name="orderPrice" value="@Model.Promo.ElementAt(i).Discount" type="text" />&emsp;</b><a class="btn btn-default btn-custom" href="#" role="button">Add</a>
-                                                        </h4>
-                                                    </p>
+                                                        <input type='button' class="btn btn-default btn-custom plus" value="+" field="quantity" />
+                                                        <p>
+                                                            <h6 class="price pull-right">
+                                                                <input value="@Model.Promo.ElementAt(i).Discount" class="foodPrice" name="price" type="hidden" />
+                                                                <b>$<input id="orderPrice" value="@Model.Promo.ElementAt(i).Discount" type="text" style="font-size: 14px; border: none; font-weight: bold; width:50px;" readonly/></b>
+                                                                <input type="submit" class="btn btn-default btn-custom" value="Add"/>
+                                                            </h6>
+                                                        </p>
+                                                    </form> 
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +137,7 @@
                                                     <form id='myform' method='POST' action='#' class="text-center form-inline">
                                                         <input type='button' value='-' class='qtyminus btn btn-custom' field='quantity' />
                                                         <div class="form-group">
-                                                            <input type='text' name='quantity' value='0' class='qty form-control' />
+                                                            <input type='text' name='quantity' value='0' class='qty form-control' readonly/>
                                                         </div>
                                                         <input type='button' value='+' class='qtyplus btn btn-custom' field='quantity' />
                                                     </form>
